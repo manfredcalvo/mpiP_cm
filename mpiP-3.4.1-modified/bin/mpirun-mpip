@@ -16,7 +16,14 @@
 #  and compiler.
 
 
-MPIP_LIB_DIR=/home/mcalvo/programs/mpiP-3.4.1
+MY_PATH="`dirname \"$0\"`"              # relative
+MY_PATH="`( cd \"$MY_PATH\" && pwd )`"  # absolutized and normalized
+
+echo "Script parent directory: $MY_PATH"
+
+MPIP_LIB_DIR="$(dirname "$MY_PATH")"
+
+echo "Folder parent directory: $MPIP_LIB_DIR"
 
 export LD_PRELOAD=${MPIP_LIB_DIR}/libmpiP.so
 
