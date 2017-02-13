@@ -169,10 +169,6 @@ Source	Target	Total Amount	Total Count
 7	7	467280	3319
 
 ------- End Communication Matrix -------------
-
----------------------------------------------------------------------------
-@--- End of Report --------------------------------------------------------
---------------------------------------------------------------------------
 	
 d) The previous communication matrix show for each rank what is the amount of bytes sent to other ranks in the application.
 
