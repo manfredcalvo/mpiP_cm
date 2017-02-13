@@ -1,0 +1,2521 @@
+@ mpiP
+@ Command : ./amg2013 -pooldist 1 -P 2 1 1 -r 1 1 1 -printstats 
+@ Version                  : 3.4.1
+@ MPIP Build date          : Nov 17 2016, 19:21:13
+@ Start time               : 2016 11 17 18:37:45
+@ Stop time                : 2016 11 17 18:37:45
+@ Timer Used               : PMPI_Wtime
+@ MPIP env var             : [null]
+@ Collector Rank           : 0
+@ Collector PID            : 5362
+@ Final Output Dir         : .
+@ Report generation        : Collective
+@ MPI Task Assignment      : 0 cadejos-3.cnca
+@ MPI Task Assignment      : 1 cadejos-3.cnca
+@ MPI Task Assignment      : 2 cadejos-3.cnca
+@ MPI Task Assignment      : 3 cadejos-3.cnca
+@ MPI Task Assignment      : 4 cadejos-3.cnca
+@ MPI Task Assignment      : 5 cadejos-3.cnca
+@ MPI Task Assignment      : 6 cadejos-3.cnca
+@ MPI Task Assignment      : 7 cadejos-3.cnca
+@ MPI Task Assignment      : 8 cadejos-4.cnca
+@ MPI Task Assignment      : 9 cadejos-4.cnca
+@ MPI Task Assignment      : 10 cadejos-4.cnca
+@ MPI Task Assignment      : 11 cadejos-4.cnca
+@ MPI Task Assignment      : 12 cadejos-4.cnca
+@ MPI Task Assignment      : 13 cadejos-4.cnca
+@ MPI Task Assignment      : 14 cadejos-4.cnca
+@ MPI Task Assignment      : 15 cadejos-4.cnca
+
+---------------------------------------------------------------------------
+@--- MPI Time (seconds) ---------------------------------------------------
+---------------------------------------------------------------------------
+Task    AppTime    MPITime     MPI%
+   0      0.037     0.0334    90.29
+   1      0.037     0.0343    92.56
+   2      0.037     0.0341    92.29
+   3     0.0365     0.0337    92.24
+   4      0.037     0.0343    92.66
+   5      0.037     0.0342    92.36
+   6      0.037     0.0343    92.66
+   7      0.037     0.0339    91.54
+   8     0.0371     0.0339    91.37
+   9     0.0371     0.0342    92.23
+  10     0.0371     0.0338    91.29
+  11     0.0371     0.0344    92.78
+  12     0.0371     0.0343    92.68
+  13     0.0371     0.0345    93.17
+  14     0.0371     0.0348    93.80
+  15     0.0371     0.0347    93.59
+   *      0.592      0.547    92.35
+---------------------------------------------------------------------------
+@--- Callsites: 73 --------------------------------------------------------
+---------------------------------------------------------------------------
+ ID Lev File/Address        Line Parent_Funct                      MPI_Call
+  1   0 0x454f6e                 hypre_ParCSRCommHandleCreate      Irecv
+  2   0 0x49166c                 hypre_DataExchangeList            Isend
+  3   0 0x4936c3                 hypre_PrintTiming                 Allreduce
+  4   0 0x40e5c9                 hypre_BoomerAMGSetup              Bcast
+  5   0 0x455076                 hypre_ParCSRCommHandleCreate      Irecv
+  6   0 0x45eee1                 hypre_ParVectorInnerProd          Allreduce
+  7   0 0x42a2f1                 hypre_BoomerAMGBuildExtPIInterp   Bcast
+  8   0 0x416351                 hypre_BoomerAMGCoarseParms        Scan
+  9   0 0x48a1e9                 hypre_APGetAllBoxesInRegions      Allreduce
+ 10   0 0x473df8                 hypre_IJVectorAssemblePar         Allreduce
+ 11   0 0x491c52                 hypre_DataExchangeList            Irecv
+ 12   0 0x477aff                 hypre_StructGridAssembleWithAP    Allreduce
+ 13   0 0x4044e5                 ReadData                          Bcast
+ 14   0 0x49172e                 hypre_DataExchangeList            Irecv
+ 15   0 0x454915                 hypre_LocateAssummedPartition     Waitall
+ 16   0 0x491a3e                 hypre_DataExchangeList            Send
+ 17   0 0x444392                 hypre_BoomerAMGCreate2ndS         Bcast
+ 18   0 0x462f24                 HYPRE_SStructGraphAssemble        Irecv
+ 19   0 0x45868d                 hypre_ParCSRMatrixSetNumNonzeros  Allreduce
+ 20   0 0x454834                 hypre_LocateAssummedPartition     Recv
+ 21   0 0x47b79a                 hypre_GatherAllBoxes              Allgather
+ 22   0 0x4936a1                 hypre_PrintTiming                 Allreduce
+ 23   0 0x455409                 hypre_ParCSRCommHandleCreate      Isend
+ 24   0 0x455209                 hypre_ParCSRCommHandleCreate      Isend
+ 25   0 0x455309                 hypre_ParCSRCommHandleCreate      Isend
+ 26   0 0x463220                 HYPRE_SStructGraphAssemble        Testall
+ 27   0 0x46340a                 HYPRE_SStructGraphAssemble        Send
+ 28   0 0x491915                 hypre_DataExchangeList            Iprobe
+ 29   0 0x491f28                 hypre_DataExchangeList            Waitall
+ 30   0 0x472143                 hypre_IJMatrixAssembleParCSR      Allreduce
+ 31   0 0x454fe9                 hypre_ParCSRCommHandleCreate      Isend
+ 32   0 0x4413e6                 hypre_BoomerAMGSetupStats         Reduce
+ 33   0 0x4918f4                 hypre_DataExchangeList            Send
+ 34   0 0x46df54                 HYPRE_IJVectorCreate              Bcast
+ 35   0 0x4550f9                 hypre_ParCSRCommHandleCreate      Isend
+ 36   0 0x402344                 main                              Barrier
+ 37   0 0x46785d                 hypre_SStructGridAssembleMaps     Allgather
+ 38   0 0x4917f9                 hypre_DataExchangeList            Recv
+ 39   0 0x4915f1                 hypre_DataExchangeList            Irecv
+ 40   0 0x477a6b                 hypre_StructGridAssembleWithAP    Allreduce
+ 41   0 0x47b872                 hypre_GatherAllBoxes              Allgatherv
+ 42   0 0x4633c2                 HYPRE_SStructGraphAssemble        Test
+ 43   0 0x46cf6c                 HYPRE_IJMatrixCreate              Bcast
+ 44   0 0x491df3                 hypre_DataExchangeList            Testall
+ 45   0 0x404518                 ReadData                          Bcast
+ 46   0 0x4917a2                 hypre_DataExchangeList            Iprobe
+ 47   0 0x46780b                 hypre_SStructGridAssembleMaps     Allgather
+ 48   0 0x41aa10                 hypre_BoomerAMGBuildMultipass     Allreduce
+ 49   0 0x477a17                 hypre_StructGridAssembleWithAP    Allreduce
+ 50   0 0x491f81                 hypre_DataExchangeList            Waitall
+ 51   0 0x4918b5                 hypre_DataExchangeList            Isend
+ 52   0 0x415c1c                 hypre_BoomerAMGCoarsenPMIS        Allreduce
+ 53   0 0x491d90                 hypre_DataExchangeList            Testall
+ 54   0 0x45538e                 hypre_ParCSRCommHandleCreate      Irecv
+ 55   0 0x45528e                 hypre_ParCSRCommHandleCreate      Irecv
+ 56   0 0x491cb5                 hypre_DataExchangeList            Waitall
+ 57   0 0x41ac27                 hypre_BoomerAMGBuildMultipass     Allreduce
+ 58   0 0x458724                 hypre_ParCSRMatrixSetDNumNonzeros Allreduce
+ 59   0 0x419f33                 hypre_BoomerAMGBuildMultipass     Bcast
+ 60   0 0x455186                 hypre_ParCSRCommHandleCreate      Irecv
+ 61   0 0x4554bb                 hypre_ParCSRCommHandleDestroy     Waitall
+ 62   0 0x46cf2b                 HYPRE_IJMatrixCreate              Bcast
+ 63   0 0x462f9e                 HYPRE_SStructGraphAssemble        Iprobe
+ 64   0 0x488434                 hypre_StructVectorAssemble        Allreduce
+ 65   0 0x46df2c                 HYPRE_IJVectorCreate              Bcast
+ 66   0 0x441099                 hypre_BoomerAMGSetupStats         Reduce
+ 67   0 0x491e69                 hypre_DataExchangeList            Irecv
+ 68   0 0x463262                 HYPRE_SStructGraphAssemble        Send
+ 69   0 0x491e42                 hypre_DataExchangeList            Isend
+ 70   0 0x454a5a                 hypre_LocateAssummedPartition     Isend
+ 71   0 0x491ecf                 hypre_DataExchangeList            Wait
+ 72   0 0x463282                 HYPRE_SStructGraphAssemble        Irecv
+ 73   0 0x491e9c                 hypre_DataExchangeList            Test
+---------------------------------------------------------------------------
+@--- Aggregate Time (top twenty, descending, milliseconds) ----------------
+---------------------------------------------------------------------------
+Call                 Site       Time    App%    MPI%     COV
+Iprobe                 46        106   17.95   19.44    0.10
+Allreduce               6         60   10.14   10.98    0.33
+Waitall                61       54.8    9.27   10.03    0.43
+Test                   73       47.3    7.99    8.65    0.26
+Allreduce              52       36.5    6.16    6.67    0.25
+Bcast                  13         17    2.87    3.11    0.18
+Allreduce              64       16.9    2.86    3.09    0.06
+Allreduce              49       14.5    2.45    2.65    0.12
+Isend                  31       10.7    1.80    1.95    0.62
+Allgatherv             41       10.1    1.70    1.84    0.01
+Testall                44        9.4    1.59    1.72    1.55
+Allreduce               9       9.08    1.53    1.66    0.03
+Allgather              21        8.8    1.49    1.61    0.01
+Allreduce              12        8.8    1.49    1.61    0.02
+Iprobe                 28       8.72    1.47    1.60    0.24
+Irecv                   1       8.53    1.44    1.56    0.36
+Allreduce              22       8.36    1.41    1.53    0.18
+Allreduce              40       8.03    1.36    1.47    0.01
+Isend                   2       6.93    1.17    1.27    0.28
+Testall                53       6.61    1.12    1.21    0.22
+---------------------------------------------------------------------------
+@--- Aggregate Sent Message Size (top twenty, descending, bytes) ----------
+---------------------------------------------------------------------------
+Call                 Site      Count      Total       Avrg  Sent%
+Isend                  31       2888   1.69e+05       58.6  34.36
+Bcast                  45         16   1.42e+05   8.88e+03  28.86
+Isend                  25       1278   4.42e+04       34.6   8.98
+Isend                  23        420   3.45e+04         82   7.00
+Send                   33        904   2.63e+04       29.1   5.34
+Isend                   2        904   1.92e+04       21.3   3.91
+Isend                  24        364   1.22e+04       33.5   2.48
+Isend                  35        466   1.04e+04       22.3   2.11
+Isend                  51        198   7.23e+03       36.5   1.47
+Allreduce               6        656   5.25e+03          8   1.07
+Allreduce              12        128    4.1e+03         32   0.83
+Allreduce              52        304   2.43e+03          8   0.49
+Allreduce               9        128   2.05e+03         16   0.42
+Reduce                 66         48   1.54e+03         32   0.31
+Reduce                 32         32   1.54e+03         48   0.31
+Isend                  70         82   1.31e+03         16   0.27
+Allreduce              64        256   1.02e+03          4   0.21
+Allreduce              40        128   1.02e+03          8   0.21
+Allreduce              49        128   1.02e+03          8   0.21
+Scan                    8         64        512          8   0.10
+---------------------------------------------------------------------------
+@--- Callsite Time statistics (all, milliseconds): 1128 -------------------
+---------------------------------------------------------------------------
+Name              Site Rank  Count      Max     Mean      Min   App%   MPI%
+Allgather           21    0      8    0.091   0.0694    0.064   1.50   1.66
+Allgather           21    1      8    0.091   0.0698    0.065   1.51   1.63
+Allgather           21    2      8    0.091   0.0696    0.066   1.51   1.63
+Allgather           21    3      8    0.087   0.0674    0.063   1.48   1.60
+Allgather           21    4      8    0.089   0.0701    0.066   1.52   1.64
+Allgather           21    5      8    0.088   0.0694    0.065   1.50   1.63
+Allgather           21    6      8    0.094   0.0695    0.065   1.50   1.62
+Allgather           21    7      8     0.09   0.0683    0.063   1.48   1.61
+Allgather           21    8      8    0.086   0.0688    0.063   1.48   1.62
+Allgather           21    9      8    0.086   0.0696    0.065   1.50   1.63
+Allgather           21   10      8    0.083   0.0678    0.064   1.46   1.60
+Allgather           21   11      8    0.084   0.0681    0.064   1.47   1.58
+Allgather           21   12      8    0.084   0.0683    0.065   1.47   1.59
+Allgather           21   13      8    0.077    0.068    0.064   1.47   1.58
+Allgather           21   14      8    0.082   0.0685    0.064   1.48   1.58
+Allgather           21   15      8    0.081   0.0683    0.065   1.47   1.57
+Allgather           21    *    128    0.094   0.0688    0.063   1.49   1.61
+
+Allgather           37    0      1     0.07     0.07     0.07   0.19   0.21
+Allgather           37    1      1     0.07     0.07     0.07   0.19   0.20
+Allgather           37    2      1     0.07     0.07     0.07   0.19   0.21
+Allgather           37    3      1    0.069    0.069    0.069   0.19   0.20
+Allgather           37    4      1    0.071    0.071    0.071   0.19   0.21
+Allgather           37    5      1     0.07     0.07     0.07   0.19   0.20
+Allgather           37    6      1     0.07     0.07     0.07   0.19   0.20
+Allgather           37    7      1     0.07     0.07     0.07   0.19   0.21
+Allgather           37    8      1    0.068    0.068    0.068   0.18   0.20
+Allgather           37    9      1    0.068    0.068    0.068   0.18   0.20
+Allgather           37   10      1    0.068    0.068    0.068   0.18   0.20
+Allgather           37   11      1    0.068    0.068    0.068   0.18   0.20
+Allgather           37   12      1    0.068    0.068    0.068   0.18   0.20
+Allgather           37   13      1    0.068    0.068    0.068   0.18   0.20
+Allgather           37   14      1    0.068    0.068    0.068   0.18   0.20
+Allgather           37   15      1    0.067    0.067    0.067   0.18   0.19
+Allgather           37    *     16    0.071   0.0689    0.067   0.19   0.20
+
+Allgather           47    0      1    0.197    0.197    0.197   0.53   0.59
+Allgather           47    1      1    0.206    0.206    0.206   0.56   0.60
+Allgather           47    2      1    0.197    0.197    0.197   0.53   0.58
+Allgather           47    3      1    0.187    0.187    0.187   0.51   0.55
+Allgather           47    4      1    0.198    0.198    0.198   0.54   0.58
+Allgather           47    5      1    0.194    0.194    0.194   0.52   0.57
+Allgather           47    6      1    0.187    0.187    0.187   0.51   0.55
+Allgather           47    7      1     0.18     0.18     0.18   0.49   0.53
+Allgather           47    8      1    0.184    0.184    0.184   0.50   0.54
+Allgather           47    9      1    0.187    0.187    0.187   0.50   0.55
+Allgather           47   10      1    0.178    0.178    0.178   0.48   0.53
+Allgather           47   11      1    0.174    0.174    0.174   0.47   0.51
+Allgather           47   12      1    0.172    0.172    0.172   0.46   0.50
+Allgather           47   13      1    0.168    0.168    0.168   0.45   0.49
+Allgather           47   14      1    0.111    0.111    0.111   0.30   0.32
+Allgather           47   15      1    0.102    0.102    0.102   0.28   0.29
+Allgather           47    *     16    0.206    0.176    0.102   0.48   0.52
+
+Allgatherv          41    0      8    0.135   0.0777    0.062   1.68   1.86
+Allgatherv          41    1      8    0.138   0.0784    0.062   1.69   1.83
+Allgatherv          41    2      8    0.138   0.0783    0.063   1.69   1.83
+Allgatherv          41    3      8     0.14   0.0788    0.063   1.72   1.87
+Allgatherv          41    4      8    0.135    0.078    0.063   1.69   1.82
+Allgatherv          41    5      8    0.139   0.0788    0.063   1.70   1.84
+Allgatherv          41    6      8    0.138   0.0781    0.063   1.69   1.82
+Allgatherv          41    7      8     0.14   0.0789    0.064   1.71   1.86
+Allgatherv          41    8      8    0.139    0.078    0.062   1.68   1.84
+Allgatherv          41    9      8    0.143    0.079    0.063   1.70   1.85
+Allgatherv          41   10      8    0.144   0.0791    0.063   1.71   1.87
+Allgatherv          41   11      8    0.144    0.079    0.063   1.70   1.84
+Allgatherv          41   12      8    0.144   0.0791    0.063   1.71   1.84
+Allgatherv          41   13      8    0.144   0.0794    0.063   1.71   1.84
+Allgatherv          41   14      8     0.14    0.079    0.063   1.71   1.82
+Allgatherv          41   15      8    0.141   0.0794    0.064   1.71   1.83
+Allgatherv          41    *    128    0.144   0.0787    0.062   1.70   1.84
+
+Allreduce            3    0      3    0.096   0.0693    0.055   0.56   0.62
+Allreduce            3    1      3    0.098   0.0697    0.054   0.56   0.61
+Allreduce            3    2      3      0.1   0.0713    0.056   0.58   0.63
+Allreduce            3    3      3    0.099   0.0707    0.056   0.58   0.63
+Allreduce            3    4      3    0.101    0.073    0.057   0.59   0.64
+Allreduce            3    5      3      0.1   0.0723    0.056   0.59   0.64
+Allreduce            3    6      3      0.1   0.0727    0.056   0.59   0.64
+Allreduce            3    7      3      0.1   0.0723    0.056   0.59   0.64
+Allreduce            3    8      3    0.069    0.063    0.057   0.51   0.56
+Allreduce            3    9      3    0.067   0.0623    0.057   0.50   0.55
+Allreduce            3   10      3    0.068   0.0627    0.057   0.51   0.56
+Allreduce            3   11      3    0.066   0.0613    0.056   0.50   0.53
+Allreduce            3   12      3    0.067   0.0623    0.057   0.50   0.54
+Allreduce            3   13      3    0.066   0.0613    0.056   0.50   0.53
+Allreduce            3   14      3    0.066   0.0617    0.056   0.50   0.53
+Allreduce            3   15      3    0.066    0.062    0.057   0.50   0.54
+Allreduce            3    *     48    0.101   0.0668    0.054   0.54   0.59
+
+Allreduce            6    0     41    0.316    0.107    0.045  11.84  13.11
+Allreduce            6    1     41    0.309    0.105    0.056  11.60  12.54
+Allreduce            6    2     41    0.275   0.0983    0.056  10.90  11.81
+Allreduce            6    3     41    0.247   0.0912    0.055  10.23  11.09
+Allreduce            6    4     41    0.206   0.0865    0.056   9.59  10.35
+Allreduce            6    5     41    0.146   0.0787    0.056   8.73   9.45
+Allreduce            6    6     41    0.098   0.0714    0.056   7.92   8.54
+Allreduce            6    7     41    0.073   0.0534    0.037   5.92   6.47
+Allreduce            6    8     41    0.081    0.062    0.056   6.86   7.50
+Allreduce            6    9     41    0.108   0.0696    0.056   7.70   8.35
+Allreduce            6   10     41    0.158   0.0777    0.055   8.59   9.41
+Allreduce            6   11     41    0.169    0.083    0.055   9.18   9.90
+Allreduce            6   12     41    0.155   0.0779    0.055   8.62   9.30
+Allreduce            6   13     41     0.17   0.0834    0.055   9.23   9.91
+Allreduce            6   14     41    0.628     0.16    0.055  17.73  18.90
+Allreduce            6   15     41    0.625    0.159    0.055  17.64  18.85
+Allreduce            6    *    656    0.628   0.0915    0.037  10.14  10.98
+
+Allreduce            9    0      8    0.104   0.0734    0.062   1.59   1.76
+Allreduce            9    1      8    0.105    0.074    0.062   1.60   1.73
+Allreduce            9    2      8    0.098   0.0727     0.06   1.57   1.71
+Allreduce            9    3      8    0.098   0.0706    0.058   1.55   1.68
+Allreduce            9    4      8    0.098   0.0726    0.059   1.57   1.69
+Allreduce            9    5      8    0.098   0.0726     0.06   1.57   1.70
+Allreduce            9    6      8    0.104   0.0739    0.061   1.60   1.72
+Allreduce            9    7      8    0.101   0.0724    0.059   1.57   1.71
+Allreduce            9    8      8    0.092   0.0693    0.061   1.49   1.64
+Allreduce            9    9      8    0.085   0.0679    0.062   1.46   1.59
+Allreduce            9   10      8    0.093   0.0689    0.061   1.49   1.63
+Allreduce            9   11      8    0.093    0.069    0.061   1.49   1.60
+Allreduce            9   12      8    0.094   0.0688    0.062   1.48   1.60
+Allreduce            9   13      8    0.094   0.0699    0.061   1.51   1.62
+Allreduce            9   14      8    0.093   0.0703     0.06   1.52   1.62
+Allreduce            9   15      8    0.093   0.0693    0.059   1.49   1.60
+Allreduce            9    *    128    0.105    0.071    0.058   1.53   1.66
+
+Allreduce           10    0      2    0.057    0.057    0.057   0.31   0.34
+Allreduce           10    1      2    0.057    0.057    0.057   0.31   0.33
+Allreduce           10    2      2    0.057    0.057    0.057   0.31   0.33
+Allreduce           10    3      2    0.057   0.0565    0.056   0.31   0.34
+Allreduce           10    4      2    0.057    0.057    0.057   0.31   0.33
+Allreduce           10    5      2    0.058   0.0575    0.057   0.31   0.34
+Allreduce           10    6      2    0.058   0.0575    0.057   0.31   0.34
+Allreduce           10    7      2    0.057    0.057    0.057   0.31   0.34
+Allreduce           10    8      2    0.062   0.0595    0.057   0.32   0.35
+Allreduce           10    9      2    0.063     0.06    0.057   0.32   0.35
+Allreduce           10   10      2    0.062    0.059    0.056   0.32   0.35
+Allreduce           10   11      2    0.063     0.06    0.057   0.32   0.35
+Allreduce           10   12      2    0.063     0.06    0.057   0.32   0.35
+Allreduce           10   13      2    0.063     0.06    0.057   0.32   0.35
+Allreduce           10   14      2    0.063     0.06    0.057   0.32   0.35
+Allreduce           10   15      2    0.063     0.06    0.057   0.32   0.35
+Allreduce           10    *     32    0.063   0.0584    0.056   0.32   0.34
+
+Allreduce           12    0      8    0.081   0.0669    0.061   1.45   1.60
+Allreduce           12    1      8    0.081   0.0673    0.061   1.45   1.57
+Allreduce           12    2      8    0.081   0.0673    0.061   1.45   1.58
+Allreduce           12    3      8    0.082   0.0673    0.061   1.47   1.60
+Allreduce           12    4      8    0.081   0.0671    0.061   1.45   1.57
+Allreduce           12    5      8    0.082   0.0675    0.062   1.46   1.58
+Allreduce           12    6      8    0.083   0.0676    0.062   1.46   1.58
+Allreduce           12    7      8    0.084   0.0675    0.062   1.46   1.59
+Allreduce           12    8      8    0.096   0.0696    0.062   1.50   1.64
+Allreduce           12    9      8    0.097   0.0706    0.063   1.52   1.65
+Allreduce           12   10      8    0.096   0.0699    0.061   1.51   1.65
+Allreduce           12   11      8    0.097   0.0703    0.062   1.52   1.63
+Allreduce           12   12      8    0.097   0.0701    0.062   1.51   1.63
+Allreduce           12   13      8    0.096   0.0703    0.062   1.52   1.63
+Allreduce           12   14      8    0.096   0.0701    0.062   1.51   1.61
+Allreduce           12   15      8    0.097   0.0705    0.063   1.52   1.63
+Allreduce           12    *    128    0.097   0.0687    0.061   1.49   1.61
+
+Allreduce           19    0      3    0.124    0.114    0.104   0.93   1.02
+Allreduce           19    1      3    0.135    0.126    0.119   1.02   1.10
+Allreduce           19    2      3    0.138    0.121    0.107   0.98   1.06
+Allreduce           19    3      3    0.135    0.115    0.097   0.94   1.02
+Allreduce           19    4      3    0.136    0.117    0.103   0.95   1.03
+Allreduce           19    5      3    0.134    0.113    0.098   0.92   0.99
+Allreduce           19    6      3      0.1    0.096    0.093   0.78   0.84
+Allreduce           19    7      3    0.095   0.0823    0.062   0.67   0.73
+Allreduce           19    8      3    0.096    0.088    0.077   0.71   0.78
+Allreduce           19    9      3    0.105   0.0953    0.088   0.77   0.84
+Allreduce           19   10      3    0.094   0.0877    0.084   0.71   0.78
+Allreduce           19   11      3    0.091    0.084    0.079   0.68   0.73
+Allreduce           19   12      3     0.09   0.0857    0.081   0.69   0.75
+Allreduce           19   13      3    0.091   0.0853    0.082   0.69   0.74
+Allreduce           19   14      3    0.085   0.0803    0.073   0.65   0.69
+Allreduce           19   15      3    0.089   0.0787     0.07   0.64   0.68
+Allreduce           19    *     48    0.138    0.098    0.062   0.79   0.86
+
+Allreduce           22    0      3    0.081   0.0643    0.056   0.52   0.58
+Allreduce           22    1      3    0.357    0.176    0.069   1.43   1.54
+Allreduce           22    2      3    0.356    0.175    0.067   1.42   1.54
+Allreduce           22    3      3    0.346    0.171    0.066   1.41   1.53
+Allreduce           22    4      3    0.343     0.17    0.068   1.38   1.49
+Allreduce           22    5      3    0.343     0.17    0.067   1.38   1.49
+Allreduce           22    6      3    0.342     0.17    0.067   1.38   1.49
+Allreduce           22    7      3    0.323    0.163    0.066   1.32   1.44
+Allreduce           22    8      3    0.372    0.176    0.066   1.42   1.56
+Allreduce           22    9      3    0.448    0.202    0.067   1.63   1.77
+Allreduce           22   10      3    0.428    0.195    0.066   1.58   1.73
+Allreduce           22   11      3    0.429    0.196    0.067   1.58   1.71
+Allreduce           22   12      3    0.422    0.193    0.067   1.56   1.69
+Allreduce           22   13      3     0.41    0.189    0.067   1.53   1.64
+Allreduce           22   14      3    0.409    0.188    0.067   1.52   1.63
+Allreduce           22   15      3    0.408    0.189    0.068   1.53   1.63
+Allreduce           22    *     48    0.448    0.174    0.056   1.41   1.53
+
+Allreduce           30    0      1    0.052    0.052    0.052   0.14   0.16
+Allreduce           30    1      1     0.04     0.04     0.04   0.11   0.12
+Allreduce           30    2      1    0.033    0.033    0.033   0.09   0.10
+Allreduce           30    3      1    0.032    0.032    0.032   0.09   0.09
+Allreduce           30    4      1    0.039    0.039    0.039   0.11   0.11
+Allreduce           30    5      1    0.033    0.033    0.033   0.09   0.10
+Allreduce           30    6      1    0.035    0.035    0.035   0.09   0.10
+Allreduce           30    7      1    0.046    0.046    0.046   0.12   0.14
+Allreduce           30    8      1    0.078    0.078    0.078   0.21   0.23
+Allreduce           30    9      1    0.082    0.082    0.082   0.22   0.24
+Allreduce           30   10      1    0.081    0.081    0.081   0.22   0.24
+Allreduce           30   11      1    0.094    0.094    0.094   0.25   0.27
+Allreduce           30   12      1    0.086    0.086    0.086   0.23   0.25
+Allreduce           30   13      1    0.087    0.087    0.087   0.23   0.25
+Allreduce           30   14      1    0.087    0.087    0.087   0.23   0.25
+Allreduce           30   15      1    0.083    0.083    0.083   0.22   0.24
+Allreduce           30    *     16    0.094   0.0617    0.032   0.17   0.18
+
+Allreduce           40    0      8    0.066   0.0639    0.063   1.38   1.53
+Allreduce           40    1      8    0.066   0.0638    0.062   1.38   1.49
+Allreduce           40    2      8    0.066   0.0639    0.062   1.38   1.50
+Allreduce           40    3      8    0.064   0.0629    0.062   1.38   1.49
+Allreduce           40    4      8    0.066   0.0638    0.062   1.38   1.49
+Allreduce           40    5      8    0.065   0.0633    0.061   1.37   1.48
+Allreduce           40    6      8    0.066   0.0635    0.062   1.37   1.48
+Allreduce           40    7      8    0.065   0.0628    0.062   1.36   1.48
+Allreduce           40    8      8    0.064    0.062     0.06   1.34   1.46
+Allreduce           40    9      8    0.064   0.0619     0.06   1.34   1.45
+Allreduce           40   10      8    0.064    0.062     0.06   1.34   1.47
+Allreduce           40   11      8    0.065    0.062     0.06   1.34   1.44
+Allreduce           40   12      8    0.064   0.0622    0.061   1.34   1.45
+Allreduce           40   13      8    0.065    0.062     0.06   1.34   1.44
+Allreduce           40   14      8    0.065   0.0624     0.06   1.35   1.44
+Allreduce           40   15      8    0.064   0.0615    0.059   1.33   1.42
+Allreduce           40    *    128    0.066   0.0627    0.059   1.36   1.47
+
+Allreduce           48    0      1    0.121    0.121    0.121   0.33   0.36
+Allreduce           48    1      1     0.11     0.11     0.11   0.30   0.32
+Allreduce           48    2      1    0.102    0.102    0.102   0.28   0.30
+Allreduce           48    3      1    0.108    0.108    0.108   0.30   0.32
+Allreduce           48    4      1    0.114    0.114    0.114   0.31   0.33
+Allreduce           48    5      1    0.131    0.131    0.131   0.35   0.38
+Allreduce           48    6      1    0.087    0.087    0.087   0.24   0.25
+Allreduce           48    7      1    0.059    0.059    0.059   0.16   0.17
+Allreduce           48    8      1    0.106    0.106    0.106   0.29   0.31
+Allreduce           48    9      1    0.134    0.134    0.134   0.36   0.39
+Allreduce           48   10      1    0.154    0.154    0.154   0.42   0.46
+Allreduce           48   11      1    0.248    0.248    0.248   0.67   0.72
+Allreduce           48   12      1    0.151    0.151    0.151   0.41   0.44
+Allreduce           48   13      1    0.251    0.251    0.251   0.68   0.73
+Allreduce           48   14      1    0.262    0.262    0.262   0.71   0.75
+Allreduce           48   15      1    0.262    0.262    0.262   0.71   0.76
+Allreduce           48    *     16    0.262     0.15    0.059   0.41   0.44
+
+Allreduce           49    0      8    0.164    0.128    0.081   2.77   3.07
+Allreduce           49    1      8    0.175    0.137    0.072   2.96   3.20
+Allreduce           49    2      8     0.17    0.131    0.076   2.84   3.08
+Allreduce           49    3      8     0.16    0.122    0.068   2.67   2.90
+Allreduce           49    4      8    0.164    0.127    0.072   2.74   2.96
+Allreduce           49    5      8     0.16    0.124    0.072   2.69   2.91
+Allreduce           49    6      8    0.152    0.117    0.072   2.53   2.73
+Allreduce           49    7      8    0.145    0.112    0.071   2.43   2.65
+Allreduce           49    8      8    0.142     0.11    0.077   2.38   2.60
+Allreduce           49    9      8    0.142    0.109     0.07   2.35   2.54
+Allreduce           49   10      8    0.138    0.108     0.08   2.33   2.55
+Allreduce           49   11      8    0.135    0.102     0.07   2.19   2.36
+Allreduce           49   12      8    0.132    0.101    0.077   2.17   2.34
+Allreduce           49   13      8    0.133   0.0965    0.068   2.08   2.24
+Allreduce           49   14      8    0.123   0.0971    0.077   2.10   2.23
+Allreduce           49   15      8    0.116   0.0905     0.07   1.95   2.09
+Allreduce           49    *    128    0.175    0.113    0.068   2.45   2.65
+
+Allreduce           52    0     19     0.21    0.149    0.084   7.67   8.50
+Allreduce           52    1     19    0.205    0.143     0.08   7.34   7.93
+Allreduce           52    2     19    0.197    0.139    0.079   7.12   7.71
+Allreduce           52    3     19    0.187    0.137    0.074   7.11   7.70
+Allreduce           52    4     19    0.187    0.137    0.078   7.02   7.58
+Allreduce           52    5     19    0.164     0.12     0.08   6.17   6.68
+Allreduce           52    6     19    0.121    0.089    0.078   4.57   4.94
+Allreduce           52    7     19    0.086   0.0538    0.041   2.77   3.02
+Allreduce           52    8     19    0.101   0.0701    0.063   3.59   3.93
+Allreduce           52    9     19    0.243    0.101    0.065   5.15   5.59
+Allreduce           52   10     19    0.136    0.109    0.075   5.61   6.15
+Allreduce           52   11     19    0.145    0.125     0.08   6.42   6.92
+Allreduce           52   12     19    0.131    0.108    0.071   5.52   5.96
+Allreduce           52   13     19    0.148    0.126    0.081   6.45   6.92
+Allreduce           52   14     19    0.239    0.157    0.086   8.04   8.57
+Allreduce           52   15     19    0.244    0.157    0.085   8.04   8.59
+Allreduce           52    *    304    0.244     0.12    0.041   6.16   6.67
+
+Allreduce           57    0      3      0.1   0.0877     0.08   0.71   0.79
+Allreduce           57    1      3      0.1    0.085    0.076   0.69   0.74
+Allreduce           57    2      3    0.099   0.0843    0.076   0.68   0.74
+Allreduce           57    3      3    0.099   0.0813    0.071   0.67   0.72
+Allreduce           57    4      3      0.1    0.083    0.073   0.67   0.73
+Allreduce           57    5      3      0.1   0.0857    0.077   0.70   0.75
+Allreduce           57    6      3    0.101    0.086    0.077   0.70   0.75
+Allreduce           57    7      3    0.099   0.0597     0.04   0.48   0.53
+Allreduce           57    8      3    0.065    0.064    0.063   0.52   0.57
+Allreduce           57    9      3    0.074   0.0697    0.063   0.56   0.61
+Allreduce           57   10      3    0.078    0.072    0.062   0.58   0.64
+Allreduce           57   11      3    0.083   0.0753    0.062   0.61   0.66
+Allreduce           57   12      3    0.078   0.0723    0.062   0.59   0.63
+Allreduce           57   13      3    0.083   0.0753    0.063   0.61   0.65
+Allreduce           57   14      3    0.086   0.0763    0.064   0.62   0.66
+Allreduce           57   15      3    0.085    0.077    0.063   0.62   0.67
+Allreduce           57    *     48    0.101   0.0772     0.04   0.63   0.68
+
+Allreduce           58    0      3    0.068   0.0657    0.063   0.53   0.59
+Allreduce           58    1      3    0.068    0.066    0.063   0.53   0.58
+Allreduce           58    2      3    0.068    0.066    0.063   0.54   0.58
+Allreduce           58    3      3    0.068    0.066    0.063   0.54   0.59
+Allreduce           58    4      3     0.07   0.0667    0.063   0.54   0.58
+Allreduce           58    5      3    0.069    0.066    0.062   0.54   0.58
+Allreduce           58    6      3    0.069   0.0663    0.062   0.54   0.58
+Allreduce           58    7      3    0.067   0.0643    0.062   0.52   0.57
+Allreduce           58    8      3    0.065   0.0633    0.061   0.51   0.56
+Allreduce           58    9      3    0.066   0.0637    0.062   0.52   0.56
+Allreduce           58   10      3    0.065   0.0633    0.062   0.51   0.56
+Allreduce           58   11      3    0.064   0.0627    0.061   0.51   0.55
+Allreduce           58   12      3    0.065   0.0633    0.062   0.51   0.55
+Allreduce           58   13      3    0.065   0.0627    0.061   0.51   0.54
+Allreduce           58   14      3    0.065    0.063    0.062   0.51   0.54
+Allreduce           58   15      3    0.062    0.062    0.062   0.50   0.54
+Allreduce           58    *     48     0.07   0.0644    0.061   0.52   0.57
+
+Allreduce           64    0     16      0.1   0.0619    0.039   2.68   2.97
+Allreduce           64    1     16      0.1    0.063    0.047   2.72   2.94
+Allreduce           64    2     16      0.1   0.0616    0.038   2.67   2.89
+Allreduce           64    3     16    0.099   0.0621    0.044   2.72   2.95
+Allreduce           64    4     16      0.1   0.0624    0.043   2.70   2.91
+Allreduce           64    5     16      0.1   0.0632    0.047   2.73   2.96
+Allreduce           64    6     16      0.1   0.0612    0.029   2.65   2.86
+Allreduce           64    7     16      0.1   0.0614    0.032   2.65   2.90
+Allreduce           64    8     16    0.142   0.0694    0.057   2.99   3.28
+Allreduce           64    9     16    0.161   0.0717    0.057   3.09   3.35
+Allreduce           64   10     16    0.141   0.0692    0.057   2.99   3.27
+Allreduce           64   11     16    0.155   0.0703    0.057   3.03   3.27
+Allreduce           64   12     16    0.141   0.0691    0.057   2.98   3.22
+Allreduce           64   13     16    0.145   0.0695    0.057   3.00   3.22
+Allreduce           64   14     16    0.161   0.0713    0.057   3.08   3.28
+Allreduce           64   15     16    0.151   0.0699    0.057   3.02   3.23
+Allreduce           64    *    256    0.161   0.0661    0.029   2.86   3.09
+
+Barrier             36    0      1    0.216    0.216    0.216   0.58   0.65
+Barrier             36    1      1    0.226    0.226    0.226   0.61   0.66
+Barrier             36    2      1    0.224    0.224    0.224   0.61   0.66
+Barrier             36    3      1     0.22     0.22     0.22   0.60   0.65
+Barrier             36    4      1    0.215    0.215    0.215   0.58   0.63
+Barrier             36    5      1    0.217    0.217    0.217   0.59   0.64
+Barrier             36    6      1    0.208    0.208    0.208   0.56   0.61
+Barrier             36    7      1    0.189    0.189    0.189   0.51   0.56
+Barrier             36    8      1    0.093    0.093    0.093   0.25   0.27
+Barrier             36    9      1     0.11     0.11     0.11   0.30   0.32
+Barrier             36   10      1    0.092    0.092    0.092   0.25   0.27
+Barrier             36   11      1    0.088    0.088    0.088   0.24   0.26
+Barrier             36   12      1    0.062    0.062    0.062   0.17   0.18
+Barrier             36   13      1    0.076    0.076    0.076   0.21   0.22
+Barrier             36   14      1    0.084    0.084    0.084   0.23   0.24
+Barrier             36   15      1    0.081    0.081    0.081   0.22   0.23
+Barrier             36    *     16    0.226     0.15    0.062   0.41   0.44
+
+Bcast                4    0      3     0.03   0.0293    0.028   0.24   0.26
+Bcast                4    1      3    0.057   0.0533    0.051   0.43   0.47
+Bcast                4    2      3    0.031    0.029    0.028   0.24   0.25
+Bcast                4    3      3    0.023   0.0203    0.016   0.17   0.18
+Bcast                4    4      3     0.02   0.0123    0.008   0.10   0.11
+Bcast                4    5      3    0.018   0.0133    0.007   0.11   0.12
+Bcast                4    6      3    0.022   0.0177    0.015   0.14   0.15
+Bcast                4    7      3    0.054    0.052    0.049   0.42   0.46
+Bcast                4    8      3     0.02   0.0197    0.019   0.16   0.17
+Bcast                4    9      3    0.034   0.0337    0.033   0.27   0.30
+Bcast                4   10      3    0.036    0.035    0.034   0.28   0.31
+Bcast                4   11      3    0.016   0.0157    0.015   0.13   0.14
+Bcast                4   12      3    0.035    0.032     0.03   0.26   0.28
+Bcast                4   13      3    0.034   0.0327    0.031   0.26   0.28
+Bcast                4   14      3    0.037    0.035    0.032   0.28   0.30
+Bcast                4   15      3    0.038   0.0363    0.035   0.29   0.31
+Bcast                4    *     48    0.057   0.0292    0.007   0.24   0.26
+
+Bcast                7    0      1    0.065    0.065    0.065   0.18   0.19
+Bcast                7    1      1    0.056    0.056    0.056   0.15   0.16
+Bcast                7    2      1    0.056    0.056    0.056   0.15   0.16
+Bcast                7    3      1    0.054    0.054    0.054   0.15   0.16
+Bcast                7    4      1    0.055    0.055    0.055   0.15   0.16
+Bcast                7    5      1    0.054    0.054    0.054   0.15   0.16
+Bcast                7    6      1    0.055    0.055    0.055   0.15   0.16
+Bcast                7    7      1    0.053    0.053    0.053   0.14   0.16
+Bcast                7    8      1    0.041    0.041    0.041   0.11   0.12
+Bcast                7    9      1    0.051    0.051    0.051   0.14   0.15
+Bcast                7   10      1     0.05     0.05     0.05   0.13   0.15
+Bcast                7   11      1    0.042    0.042    0.042   0.11   0.12
+Bcast                7   12      1    0.056    0.056    0.056   0.15   0.16
+Bcast                7   13      1    0.038    0.038    0.038   0.10   0.11
+Bcast                7   14      1    0.043    0.043    0.043   0.12   0.12
+Bcast                7   15      1    0.022    0.022    0.022   0.06   0.06
+Bcast                7    *     16    0.065   0.0494    0.022   0.13   0.14
+
+Bcast               13    0      1    0.528    0.528    0.528   1.43   1.58
+Bcast               13    1      1     1.09     1.09     1.09   2.95   3.19
+Bcast               13    2      1     1.07     1.07     1.07   2.90   3.14
+Bcast               13    3      1    0.626    0.626    0.626   1.71   1.86
+Bcast               13    4      1     1.09     1.09     1.09   2.94   3.18
+Bcast               13    5      1     1.07     1.07     1.07   2.90   3.14
+Bcast               13    6      1     1.08     1.08     1.08   2.92   3.15
+Bcast               13    7      1     1.09     1.09     1.09   2.96   3.23
+Bcast               13    8      1     1.16     1.16     1.16   3.13   3.43
+Bcast               13    9      1     1.16     1.16     1.16   3.13   3.40
+Bcast               13   10      1     1.17     1.17     1.17   3.14   3.44
+Bcast               13   11      1     1.17     1.17     1.17   3.15   3.40
+Bcast               13   12      1     1.16     1.16     1.16   3.12   3.37
+Bcast               13   13      1     1.16     1.16     1.16   3.13   3.36
+Bcast               13   14      1     1.17     1.17     1.17   3.17   3.38
+Bcast               13   15      1     1.18     1.18     1.18   3.18   3.40
+Bcast               13    *     16     1.18     1.06    0.528   2.87   3.11
+
+Bcast               17    0      1     0.04     0.04     0.04   0.11   0.12
+Bcast               17    1      1    0.061    0.061    0.061   0.16   0.18
+Bcast               17    2      1    0.048    0.048    0.048   0.13   0.14
+Bcast               17    3      1    0.047    0.047    0.047   0.13   0.14
+Bcast               17    4      1     0.05     0.05     0.05   0.14   0.15
+Bcast               17    5      1    0.049    0.049    0.049   0.13   0.14
+Bcast               17    6      1    0.059    0.059    0.059   0.16   0.17
+Bcast               17    7      1    0.058    0.058    0.058   0.16   0.17
+Bcast               17    8      1    0.014    0.014    0.014   0.04   0.04
+Bcast               17    9      1    0.018    0.018    0.018   0.05   0.05
+Bcast               17   10      1    0.021    0.021    0.021   0.06   0.06
+Bcast               17   11      1     0.01     0.01     0.01   0.03   0.03
+Bcast               17   12      1    0.021    0.021    0.021   0.06   0.06
+Bcast               17   13      1     0.02     0.02     0.02   0.05   0.06
+Bcast               17   14      1    0.022    0.022    0.022   0.06   0.06
+Bcast               17   15      1    0.016    0.016    0.016   0.04   0.05
+Bcast               17    *     16    0.061   0.0346     0.01   0.09   0.10
+
+Bcast               34    0      2    0.136    0.123     0.11   0.67   0.74
+Bcast               34    1      2    0.137    0.124    0.111   0.67   0.72
+Bcast               34    2      2    0.136    0.123     0.11   0.67   0.72
+Bcast               34    3      2    0.136    0.123    0.111   0.68   0.73
+Bcast               34    4      2    0.136    0.123     0.11   0.66   0.72
+Bcast               34    5      2    0.136    0.123     0.11   0.67   0.72
+Bcast               34    6      2    0.136    0.123     0.11   0.67   0.72
+Bcast               34    7      2    0.137    0.124    0.111   0.67   0.73
+Bcast               34    8      2    0.014    0.014    0.014   0.08   0.08
+Bcast               34    9      2    0.015   0.0145    0.014   0.08   0.08
+Bcast               34   10      2    0.014    0.014    0.014   0.08   0.08
+Bcast               34   11      2    0.014    0.014    0.014   0.08   0.08
+Bcast               34   12      2    0.015    0.014    0.013   0.08   0.08
+Bcast               34   13      2    0.014   0.0135    0.013   0.07   0.08
+Bcast               34   14      2    0.014    0.013    0.012   0.07   0.07
+Bcast               34   15      2    0.014   0.0135    0.013   0.07   0.08
+Bcast               34    *     32    0.137   0.0686    0.012   0.37   0.40
+
+Bcast               43    0      1    0.096    0.096    0.096   0.26   0.29
+Bcast               43    1      1    0.093    0.093    0.093   0.25   0.27
+Bcast               43    2      1    0.095    0.095    0.095   0.26   0.28
+Bcast               43    3      1    0.094    0.094    0.094   0.26   0.28
+Bcast               43    4      1    0.095    0.095    0.095   0.26   0.28
+Bcast               43    5      1    0.095    0.095    0.095   0.26   0.28
+Bcast               43    6      1    0.094    0.094    0.094   0.25   0.27
+Bcast               43    7      1    0.094    0.094    0.094   0.25   0.28
+Bcast               43    8      1    0.039    0.039    0.039   0.11   0.12
+Bcast               43    9      1    0.038    0.038    0.038   0.10   0.11
+Bcast               43   10      1    0.037    0.037    0.037   0.10   0.11
+Bcast               43   11      1    0.032    0.032    0.032   0.09   0.09
+Bcast               43   12      1    0.035    0.035    0.035   0.09   0.10
+Bcast               43   13      1    0.034    0.034    0.034   0.09   0.10
+Bcast               43   14      1    0.017    0.017    0.017   0.05   0.05
+Bcast               43   15      1    0.014    0.014    0.014   0.04   0.04
+Bcast               43    *     16    0.096   0.0626    0.014   0.17   0.18
+
+Bcast               45    0      1    0.059    0.059    0.059   0.16   0.18
+Bcast               45    1      1    0.057    0.057    0.057   0.15   0.17
+Bcast               45    2      1    0.059    0.059    0.059   0.16   0.17
+Bcast               45    3      1    0.061    0.061    0.061   0.17   0.18
+Bcast               45    4      1    0.058    0.058    0.058   0.16   0.17
+Bcast               45    5      1    0.062    0.062    0.062   0.17   0.18
+Bcast               45    6      1    0.068    0.068    0.068   0.18   0.20
+Bcast               45    7      1    0.069    0.069    0.069   0.19   0.20
+Bcast               45    8      1    0.162    0.162    0.162   0.44   0.48
+Bcast               45    9      1    0.171    0.171    0.171   0.46   0.50
+Bcast               45   10      1    0.178    0.178    0.178   0.48   0.53
+Bcast               45   11      1    0.186    0.186    0.186   0.50   0.54
+Bcast               45   12      1    0.174    0.174    0.174   0.47   0.51
+Bcast               45   13      1    0.182    0.182    0.182   0.49   0.53
+Bcast               45   14      1    0.182    0.182    0.182   0.49   0.52
+Bcast               45   15      1    0.182    0.182    0.182   0.49   0.52
+Bcast               45    *     16    0.186    0.119    0.057   0.32   0.35
+
+Bcast               59    0      1    0.058    0.058    0.058   0.16   0.17
+Bcast               59    1      1    0.047    0.047    0.047   0.13   0.14
+Bcast               59    2      1    0.058    0.058    0.058   0.16   0.17
+Bcast               59    3      1    0.049    0.049    0.049   0.13   0.15
+Bcast               59    4      1    0.055    0.055    0.055   0.15   0.16
+Bcast               59    5      1     0.05     0.05     0.05   0.14   0.15
+Bcast               59    6      1    0.051    0.051    0.051   0.14   0.15
+Bcast               59    7      1    0.052    0.052    0.052   0.14   0.15
+Bcast               59    8      1    0.017    0.017    0.017   0.05   0.05
+Bcast               59    9      1    0.028    0.028    0.028   0.08   0.08
+Bcast               59   10      1    0.018    0.018    0.018   0.05   0.05
+Bcast               59   11      1    0.022    0.022    0.022   0.06   0.06
+Bcast               59   12      1     0.03     0.03     0.03   0.08   0.09
+Bcast               59   13      1     0.03     0.03     0.03   0.08   0.09
+Bcast               59   14      1    0.031    0.031    0.031   0.08   0.09
+Bcast               59   15      1     0.03     0.03     0.03   0.08   0.09
+Bcast               59    *     16    0.058   0.0391    0.017   0.11   0.11
+
+Bcast               62    0      1    0.014    0.014    0.014   0.04   0.04
+Bcast               62    1      1     0.04     0.04     0.04   0.11   0.12
+Bcast               62    2      1    0.034    0.034    0.034   0.09   0.10
+Bcast               62    3      1     0.03     0.03     0.03   0.08   0.09
+Bcast               62    4      1    0.015    0.015    0.015   0.04   0.04
+Bcast               62    5      1    0.027    0.027    0.027   0.07   0.08
+Bcast               62    6      1    0.017    0.017    0.017   0.05   0.05
+Bcast               62    7      1    0.017    0.017    0.017   0.05   0.05
+Bcast               62    8      1    0.017    0.017    0.017   0.05   0.05
+Bcast               62    9      1    0.018    0.018    0.018   0.05   0.05
+Bcast               62   10      1    0.012    0.012    0.012   0.03   0.04
+Bcast               62   11      1    0.009    0.009    0.009   0.02   0.03
+Bcast               62   12      1    0.008    0.008    0.008   0.02   0.02
+Bcast               62   13      1    0.011    0.011    0.011   0.03   0.03
+Bcast               62   14      1    0.008    0.008    0.008   0.02   0.02
+Bcast               62   15      1     0.01     0.01     0.01   0.03   0.03
+Bcast               62    *     16     0.04   0.0179    0.008   0.05   0.05
+
+Bcast               65    0      2    0.013   0.0115     0.01   0.06   0.07
+Bcast               65    1      2    0.017    0.013    0.009   0.07   0.08
+Bcast               65    2      2    0.017    0.013    0.009   0.07   0.08
+Bcast               65    3      2    0.015    0.011    0.007   0.06   0.07
+Bcast               65    4      2    0.017    0.013    0.009   0.07   0.08
+Bcast               65    5      2    0.018   0.0135    0.009   0.07   0.08
+Bcast               65    6      2    0.018    0.014     0.01   0.08   0.08
+Bcast               65    7      2    0.011   0.0095    0.008   0.05   0.06
+Bcast               65    8      2    0.065    0.053    0.041   0.29   0.31
+Bcast               65    9      2    0.064   0.0555    0.047   0.30   0.32
+Bcast               65   10      2    0.068   0.0565    0.045   0.30   0.33
+Bcast               65   11      2    0.071   0.0565    0.042   0.30   0.33
+Bcast               65   12      2    0.068    0.057    0.046   0.31   0.33
+Bcast               65   13      2     0.07   0.0565    0.043   0.30   0.33
+Bcast               65   14      2     0.07    0.057    0.044   0.31   0.33
+Bcast               65   15      2    0.069    0.056    0.043   0.30   0.32
+Bcast               65    *     32    0.071   0.0342    0.007   0.18   0.20
+
+Iprobe              28    0     38    0.021  0.00926    0.003   0.95   1.05
+Iprobe              28    1     53    0.052   0.0116    0.003   1.66   1.79
+Iprobe              28    2     62    0.022  0.00963    0.003   1.61   1.75
+Iprobe              28    3     60    0.021    0.009    0.002   1.48   1.60
+Iprobe              28    4     51    0.022  0.00784    0.002   1.08   1.17
+Iprobe              28    5     70    0.059  0.00877    0.002   1.66   1.80
+Iprobe              28    6     75    0.036  0.00851    0.002   1.73   1.86
+Iprobe              28    7     78    0.025     0.01    0.002   2.11   2.31
+Iprobe              28    8     80    0.031  0.00843    0.003   1.82   1.99
+Iprobe              28    9     72    0.029  0.00858    0.002   1.67   1.81
+Iprobe              28   10     65    0.031  0.00954    0.003   1.67   1.83
+Iprobe              28   11     45    0.049   0.0143    0.003   1.73   1.87
+Iprobe              28   12     50    0.019   0.0084    0.003   1.13   1.22
+Iprobe              28   13     40    0.029   0.0126    0.003   1.36   1.46
+Iprobe              28   14     37    0.021   0.0103    0.003   1.03   1.10
+Iprobe              28   15     28    0.022   0.0115    0.003   0.87   0.93
+Iprobe              28    *    904    0.059  0.00965    0.002   1.47   1.60
+
+Iprobe              46    0    535    0.049   0.0128    0.003  18.47  20.45
+Iprobe              46    1    531     0.04    0.013    0.002  18.62  20.11
+Iprobe              46    2    499    0.096    0.013    0.002  17.48  18.94
+Iprobe              46    3    525    0.053   0.0128    0.002  18.46  20.02
+Iprobe              46    4    524    0.049   0.0124    0.002  17.54  18.92
+Iprobe              46    5    491    0.042   0.0129    0.002  17.09  18.50
+Iprobe              46    6    477    0.042   0.0125    0.002  16.11  17.39
+Iprobe              46    7    428    0.049   0.0134    0.002  15.56  17.00
+Iprobe              46    8    470     0.07   0.0125    0.002  15.86  17.36
+Iprobe              46    9    491    0.054   0.0128    0.002  16.98  18.41
+Iprobe              46   10    466    0.056   0.0129    0.003  16.26  17.82
+Iprobe              46   11    512    0.032   0.0131    0.002  18.10  19.51
+Iprobe              46   12    512    0.058    0.013    0.002  17.91  19.33
+Iprobe              46   13    547    0.058   0.0131    0.002  19.40  20.83
+Iprobe              46   14    596    0.044   0.0132    0.003  21.15  22.55
+Iprobe              46   15    618    0.042   0.0134    0.003  22.27  23.79
+Iprobe              46    *   8222    0.096   0.0129    0.002  17.95  19.44
+
+Iprobe              63    0      6    0.015   0.0117    0.006   0.19   0.21
+Iprobe              63    1      7    0.018   0.0121    0.004   0.23   0.25
+Iprobe              63    2      6    0.016   0.0127    0.009   0.21   0.22
+Iprobe              63    3      6    0.018   0.0135    0.012   0.22   0.24
+Iprobe              63    4      7    0.018    0.011    0.004   0.21   0.22
+Iprobe              63    5      7    0.017   0.0129    0.009   0.24   0.26
+Iprobe              63    6      7    0.016   0.0124    0.006   0.24   0.25
+Iprobe              63    7      7    0.018    0.014    0.012   0.26   0.29
+Iprobe              63    8      8    0.018   0.0123    0.003   0.26   0.29
+Iprobe              63    9      8    0.018   0.0129    0.009   0.28   0.30
+Iprobe              63   10      8    0.016   0.0131     0.01   0.28   0.31
+Iprobe              63   11      8    0.018   0.0132    0.012   0.29   0.31
+Iprobe              63   12      8    0.019    0.013    0.003   0.28   0.30
+Iprobe              63   13      8    0.018   0.0143    0.013   0.31   0.33
+Iprobe              63   14      9    0.018   0.0129    0.003   0.31   0.33
+Iprobe              63   15      9    0.019   0.0141    0.013   0.34   0.37
+Iprobe              63    *    119    0.019   0.0129    0.003   0.26   0.28
+
+Irecv                1    0     97    0.011  0.00341    0.002   0.90   0.99
+Irecv                1    1    187    0.005  0.00283    0.002   1.43   1.54
+Irecv                1    2    182    0.005  0.00305    0.002   1.50   1.63
+Irecv                1    3    190    0.006  0.00312    0.002   1.62   1.76
+Irecv                1    4    202    0.006  0.00276    0.002   1.51   1.63
+Irecv                1    5    212    0.007  0.00289    0.002   1.66   1.79
+Irecv                1    6    212    0.007  0.00267    0.002   1.53   1.65
+Irecv                1    7    245    0.008  0.00301    0.002   1.99   2.18
+Irecv                1    8    254    0.006  0.00285    0.002   1.95   2.14
+Irecv                1    9    298    0.004  0.00272    0.002   2.19   2.37
+Irecv                1   10    237    0.006  0.00322    0.002   2.06   2.25
+Irecv                1   11    106    0.009  0.00323    0.002   0.92   0.99
+Irecv                1   12    212    0.005  0.00298    0.002   1.70   1.84
+Irecv                1   13    106    0.004  0.00292    0.002   0.84   0.90
+Irecv                1   14     74    0.004  0.00314    0.002   0.63   0.67
+Irecv                1   15     74    0.004  0.00315    0.003   0.63   0.67
+Irecv                1    *   2888    0.011  0.00295    0.002   1.44   1.56
+
+Irecv                5    0     11    0.005  0.00345    0.002   0.10   0.11
+Irecv                5    1     22    0.004  0.00286    0.002   0.17   0.18
+Irecv                5    2     36    0.005  0.00272    0.002   0.27   0.29
+Irecv                5    3     37    0.005  0.00289    0.002   0.29   0.32
+Irecv                5    4     23    0.006  0.00309    0.002   0.19   0.21
+Irecv                5    5     38    0.005    0.003    0.002   0.31   0.33
+Irecv                5    6     38    0.004  0.00282    0.002   0.29   0.31
+Irecv                5    7     47    0.005  0.00296    0.002   0.38   0.41
+Irecv                5    8     55    0.005   0.0028    0.002   0.42   0.45
+Irecv                5    9     31    0.004  0.00274    0.002   0.23   0.25
+Irecv                5   10     46    0.005  0.00311    0.002   0.39   0.42
+Irecv                5   11     19    0.005  0.00347    0.002   0.18   0.19
+Irecv                5   12     38    0.004  0.00305    0.002   0.31   0.34
+Irecv                5   13     19    0.004  0.00311    0.002   0.16   0.17
+Irecv                5   14      3    0.005  0.00433    0.004   0.04   0.04
+Irecv                5   15      3    0.005    0.004    0.003   0.03   0.03
+Irecv                5    *    466    0.006  0.00297    0.002   0.23   0.25
+
+Irecv               11    0     12    0.005  0.00267    0.002   0.09   0.10
+Irecv               11    1     12    0.003    0.003    0.003   0.10   0.11
+Irecv               11    2     12    0.004  0.00308    0.003   0.10   0.11
+Irecv               11    3     12    0.006  0.00333    0.003   0.11   0.12
+Irecv               11    4     12    0.004  0.00283    0.002   0.09   0.10
+Irecv               11    5     12    0.004  0.00292    0.002   0.09   0.10
+Irecv               11    6     12    0.004  0.00308    0.003   0.10   0.11
+Irecv               11    7     12    0.003  0.00275    0.002   0.09   0.10
+Irecv               11    8     16    0.004  0.00313    0.003   0.13   0.15
+Irecv               11    9     16    0.004  0.00281    0.002   0.12   0.13
+Irecv               11   10     11    0.003  0.00282    0.002   0.08   0.09
+Irecv               11   11     12    0.004  0.00275    0.002   0.09   0.10
+Irecv               11   12     11    0.003    0.003    0.003   0.09   0.10
+Irecv               11   13     12    0.003  0.00292    0.002   0.09   0.10
+Irecv               11   14     12    0.004  0.00283    0.002   0.09   0.10
+Irecv               11   15     12    0.003  0.00283    0.002   0.09   0.10
+Irecv               11    *    198    0.006  0.00292    0.002   0.10   0.11
+
+Irecv               14    0    128    0.013  0.00319    0.002   1.10   1.22
+Irecv               14    2     32     0.02  0.00413    0.002   0.36   0.39
+Irecv               14    4     64    0.025  0.00353    0.002   0.61   0.66
+Irecv               14    6     32    0.023  0.00403    0.002   0.35   0.38
+Irecv               14    8     96     0.02  0.00339    0.002   0.88   0.96
+Irecv               14   10     32    0.019  0.00416    0.002   0.36   0.39
+Irecv               14   12     64    0.021  0.00353    0.002   0.61   0.66
+Irecv               14   14     32    0.021  0.00416    0.003   0.36   0.38
+Irecv               14    *    480    0.025  0.00357        0   0.29   0.31
+
+Irecv               18    0      4    0.005   0.0035    0.003   0.04   0.04
+Irecv               18    2      1    0.005    0.005    0.005   0.01   0.01
+Irecv               18    4      2    0.005    0.004    0.003   0.02   0.02
+Irecv               18    6      1    0.005    0.005    0.005   0.01   0.01
+Irecv               18    8      3    0.005  0.00367    0.003   0.03   0.03
+Irecv               18   10      1    0.005    0.005    0.005   0.01   0.01
+Irecv               18   12      2    0.005    0.004    0.003   0.02   0.02
+Irecv               18   14      1    0.006    0.006    0.006   0.02   0.02
+Irecv               18    *     15    0.006  0.00413        0   0.01   0.01
+
+Irecv               39    0     41    0.021  0.00415    0.002   0.46   0.51
+Irecv               39    1     50    0.024  0.00354    0.002   0.48   0.52
+Irecv               39    2     56    0.004  0.00296    0.002   0.45   0.49
+Irecv               39    3     56    0.005  0.00318    0.002   0.49   0.53
+Irecv               39    4     60    0.007  0.00303    0.002   0.49   0.53
+Irecv               39    5     65    0.012  0.00306    0.002   0.54   0.58
+Irecv               39    6     64    0.004  0.00287    0.002   0.50   0.54
+Irecv               39    7     68    0.005  0.00306    0.002   0.56   0.61
+Irecv               39    8     73     0.01  0.00303    0.002   0.60   0.65
+Irecv               39    9     77    0.011  0.00306    0.002   0.64   0.69
+Irecv               39   10     67    0.168  0.00579    0.002   1.05   1.15
+Irecv               39   11     49    0.171  0.00659    0.002   0.87   0.94
+Irecv               39   12     64    0.161  0.00545    0.002   0.94   1.02
+Irecv               39   13     45    0.161   0.0066    0.002   0.80   0.86
+Irecv               39   14     34    0.004    0.003    0.002   0.28   0.29
+Irecv               39   15     35    0.005  0.00323    0.003   0.30   0.33
+Irecv               39    *    904    0.171  0.00386    0.002   0.59   0.64
+
+Irecv               54    0     13    0.004  0.00308    0.003   0.11   0.12
+Irecv               54    1     26    0.003  0.00277    0.002   0.19   0.21
+Irecv               54    2     28    0.005  0.00318    0.002   0.24   0.26
+Irecv               54    3     29    0.006  0.00286    0.002   0.23   0.25
+Irecv               54    4     27    0.004  0.00285    0.002   0.21   0.22
+Irecv               54    5     30    0.005  0.00307    0.002   0.25   0.27
+Irecv               54    6     30    0.004  0.00283    0.002   0.23   0.25
+Irecv               54    7     36    0.004    0.003    0.002   0.29   0.32
+Irecv               54    8     36    0.009  0.00322    0.002   0.31   0.34
+Irecv               54    9     45    0.004  0.00289    0.002   0.35   0.38
+Irecv               54   10     35    0.014  0.00349    0.002   0.33   0.36
+Irecv               54   11     16    0.012  0.00344    0.002   0.15   0.16
+Irecv               54   12     30    0.004  0.00287    0.002   0.23   0.25
+Irecv               54   13     15    0.004   0.0032    0.003   0.13   0.14
+Irecv               54   14     12    0.004  0.00325    0.003   0.11   0.11
+Irecv               54   15     12    0.004  0.00325    0.003   0.11   0.11
+Irecv               54    *    420    0.014  0.00305    0.002   0.22   0.23
+
+Irecv               55    0     43    0.005  0.00328    0.002   0.38   0.42
+Irecv               55    1     86    0.005   0.0029    0.002   0.67   0.73
+Irecv               55    2     86    0.009  0.00306    0.002   0.71   0.77
+Irecv               55    3     88    0.008  0.00313    0.002   0.75   0.82
+Irecv               55    4     88    0.004  0.00285    0.002   0.68   0.73
+Irecv               55    5     90    0.005  0.00288    0.002   0.70   0.76
+Irecv               55    6     90    0.004  0.00274    0.002   0.67   0.72
+Irecv               55    7    102    0.009   0.0032    0.002   0.88   0.96
+Irecv               55    8    102    0.007  0.00306    0.002   0.84   0.92
+Irecv               55    9    138    0.004  0.00276    0.002   1.03   1.11
+Irecv               55   10    100    0.006  0.00342    0.002   0.92   1.01
+Irecv               55   11     46    0.006  0.00337    0.002   0.42   0.45
+Irecv               55   12     90    0.009   0.0032    0.002   0.78   0.84
+Irecv               55   13     45    0.004   0.0032    0.002   0.39   0.42
+Irecv               55   14     42    0.004  0.00321    0.002   0.36   0.39
+Irecv               55   15     42    0.005  0.00336    0.003   0.38   0.41
+Irecv               55    *   1278    0.009  0.00306    0.002   0.66   0.72
+
+Irecv               60    0     12    0.006  0.00417    0.003   0.14   0.15
+Irecv               60    1     24    0.004    0.003    0.002   0.19   0.21
+Irecv               60    2     26    0.005  0.00327    0.002   0.23   0.25
+Irecv               60    3     26    0.006  0.00412    0.002   0.29   0.32
+Irecv               60    4     24    0.004  0.00296    0.002   0.19   0.21
+Irecv               60    5     26    0.005  0.00288    0.002   0.20   0.22
+Irecv               60    6     26    0.004  0.00281    0.002   0.20   0.21
+Irecv               60    7     29    0.005  0.00369    0.003   0.29   0.32
+Irecv               60    8     30     0.01  0.00347    0.002   0.28   0.31
+Irecv               60    9     38    0.004  0.00284    0.002   0.29   0.32
+Irecv               60   10     29    0.006  0.00345    0.002   0.27   0.30
+Irecv               60   11     13    0.004  0.00354    0.003   0.12   0.13
+Irecv               60   12     26    0.005  0.00323    0.002   0.23   0.24
+Irecv               60   13     13    0.004  0.00323    0.003   0.11   0.12
+Irecv               60   14     11    0.006  0.00355    0.003   0.11   0.11
+Irecv               60   15     11    0.004  0.00355    0.003   0.11   0.11
+Irecv               60    *    364     0.01   0.0033    0.002   0.20   0.22
+
+Irecv               67    1     32    0.004  0.00328    0.002   0.28   0.31
+Irecv               67    2     32    0.004  0.00337    0.003   0.29   0.32
+Irecv               67    3     32    0.014  0.00378    0.003   0.33   0.36
+Irecv               67    4     32    0.005  0.00306    0.003   0.26   0.29
+Irecv               67    5     32    0.015  0.00372    0.002   0.32   0.35
+Irecv               67    6     32    0.004  0.00316    0.003   0.27   0.29
+Irecv               67    7     32    0.015  0.00391    0.003   0.34   0.37
+Irecv               67    8     32    0.008    0.004    0.003   0.35   0.38
+Irecv               67    9     32    0.013  0.00369    0.003   0.32   0.35
+Irecv               67   10     32    0.005  0.00334    0.002   0.29   0.32
+Irecv               67   11     32    0.013  0.00387    0.003   0.33   0.36
+Irecv               67   12     32    0.004  0.00328    0.003   0.28   0.31
+Irecv               67   13     32    0.015  0.00366    0.003   0.32   0.34
+Irecv               67   14     32    0.004  0.00309    0.003   0.27   0.28
+Irecv               67   15     32    0.015  0.00378    0.003   0.33   0.35
+Irecv               67    *    480    0.015  0.00353        0   0.29   0.31
+
+Irecv               72    1      1    0.004    0.004    0.004   0.01   0.01
+Irecv               72    2      1    0.002    0.002    0.002   0.01   0.01
+Irecv               72    3      1    0.004    0.004    0.004   0.01   0.01
+Irecv               72    4      1    0.003    0.003    0.003   0.01   0.01
+Irecv               72    5      1    0.004    0.004    0.004   0.01   0.01
+Irecv               72    6      1    0.003    0.003    0.003   0.01   0.01
+Irecv               72    7      1    0.003    0.003    0.003   0.01   0.01
+Irecv               72    8      1    0.004    0.004    0.004   0.01   0.01
+Irecv               72    9      1    0.003    0.003    0.003   0.01   0.01
+Irecv               72   10      1    0.003    0.003    0.003   0.01   0.01
+Irecv               72   11      1    0.004    0.004    0.004   0.01   0.01
+Irecv               72   12      1    0.004    0.004    0.004   0.01   0.01
+Irecv               72   13      1    0.004    0.004    0.004   0.01   0.01
+Irecv               72   14      1    0.003    0.003    0.003   0.01   0.01
+Irecv               72   15      1    0.003    0.003    0.003   0.01   0.01
+Irecv               72    *     15    0.004   0.0034        0   0.01   0.01
+
+Isend                2    0     41    0.185   0.0099    0.002   1.10   1.22
+Isend                2    1     50    0.197  0.00872    0.002   1.18   1.27
+Isend                2    2     56    0.169  0.00752    0.002   1.14   1.23
+Isend                2    3     56    0.171  0.00775    0.003   1.19   1.29
+Isend                2    4     60    0.166   0.0071    0.002   1.15   1.24
+Isend                2    5     65    0.173  0.00686    0.002   1.21   1.31
+Isend                2    6     64     0.17  0.00733    0.002   1.27   1.37
+Isend                2    7     68    0.182   0.0101    0.002   1.86   2.03
+Isend                2    8     73    0.178  0.00873    0.002   1.72   1.88
+Isend                2    9     77    0.182  0.00765    0.002   1.59   1.72
+Isend                2   10     67    0.018  0.00607    0.002   1.10   1.20
+Isend                2   11     49     0.02  0.00608    0.002   0.80   0.87
+Isend                2   12     64    0.016  0.00536    0.002   0.93   1.00
+Isend                2   13     45    0.016  0.00529    0.002   0.64   0.69
+Isend                2   14     34    0.171   0.0101    0.003   0.92   0.98
+Isend                2   15     35     0.17  0.00989    0.003   0.93   1.00
+Isend                2    *    904    0.197  0.00766    0.002   1.17   1.27
+
+Isend               23    0     14    0.004  0.00307    0.003   0.12   0.13
+Isend               23    1     27    0.003  0.00278    0.002   0.20   0.22
+Isend               23    2     26    0.005  0.00335    0.003   0.24   0.25
+Isend               23    3     27    0.006  0.00319    0.002   0.24   0.26
+Isend               23    4     29    0.004    0.003    0.002   0.24   0.25
+Isend               23    5     30    0.005  0.00303    0.002   0.25   0.27
+Isend               23    6     30    0.009  0.00323    0.002   0.26   0.28
+Isend               23    7     35    0.013  0.00689    0.003   0.65   0.71
+Isend               23    8     34    0.015  0.00603    0.002   0.55   0.61
+Isend               23    9     49    0.011  0.00422    0.002   0.56   0.61
+Isend               23   10     35    0.013   0.0036    0.002   0.34   0.37
+Isend               23   11     15    0.006    0.003    0.002   0.12   0.13
+Isend               23   12     31    0.012  0.00358    0.003   0.30   0.32
+Isend               23   13     14    0.004  0.00314    0.003   0.12   0.13
+Isend               23   14     12    0.004  0.00325    0.003   0.11   0.11
+Isend               23   15     12    0.004  0.00333    0.003   0.11   0.12
+Isend               23    *    420    0.015  0.00387    0.002   0.27   0.30
+
+Isend               24    0     13    0.004  0.00346    0.003   0.12   0.13
+Isend               24    1     25    0.004  0.00304    0.003   0.21   0.22
+Isend               24    2     24    0.004    0.003    0.002   0.19   0.21
+Isend               24    3     24    0.004  0.00317    0.003   0.21   0.23
+Isend               24    4     26    0.004  0.00312    0.003   0.22   0.24
+Isend               24    5     26    0.004    0.003    0.002   0.21   0.23
+Isend               24    6     26    0.003  0.00292    0.002   0.21   0.22
+Isend               24    7     28    0.012  0.00757    0.003   0.57   0.63
+Isend               24    8     28     0.01  0.00593    0.003   0.45   0.49
+Isend               24    9     42    0.017  0.00412    0.002   0.47   0.51
+Isend               24   10     28    0.005  0.00321    0.002   0.24   0.27
+Isend               24   11     13    0.003    0.003    0.003   0.11   0.11
+Isend               24   12     26    0.004  0.00323    0.003   0.23   0.24
+Isend               24   13     13    0.004  0.00315    0.003   0.11   0.12
+Isend               24   14     11    0.003    0.003    0.003   0.09   0.09
+Isend               24   15     11    0.004  0.00309    0.003   0.09   0.10
+Isend               24    *    364    0.017  0.00378    0.002   0.23   0.25
+
+Isend               25    0     43    0.004  0.00305    0.002   0.35   0.39
+Isend               25    1     86    0.009  0.00302    0.002   0.70   0.76
+Isend               25    2     86    0.005  0.00316    0.002   0.74   0.80
+Isend               25    3     88    0.005  0.00316    0.002   0.76   0.82
+Isend               25    4     88    0.004  0.00292    0.002   0.69   0.75
+Isend               25    5     90    0.006  0.00301    0.002   0.73   0.79
+Isend               25    6     90     0.01  0.00311    0.002   0.76   0.82
+Isend               25    7    102    0.013  0.00698    0.002   1.92   2.10
+Isend               25    8    102    0.014  0.00575    0.002   1.58   1.73
+Isend               25    9    138    0.017  0.00379    0.002   1.41   1.53
+Isend               25   10    101    0.017  0.00364    0.002   0.99   1.09
+Isend               25   11     45    0.004  0.00298    0.002   0.36   0.39
+Isend               25   12     91    0.012  0.00342    0.002   0.84   0.91
+Isend               25   13     44    0.008   0.0033    0.003   0.39   0.42
+Isend               25   14     42    0.011  0.00329    0.002   0.37   0.40
+Isend               25   15     42    0.005  0.00314    0.003   0.36   0.38
+Isend               25    *   1278    0.017  0.00375    0.002   0.81   0.88
+
+Isend               31    0     91    0.012  0.00337    0.002   0.83   0.92
+Isend               31    1    181    0.004  0.00273    0.002   1.34   1.44
+Isend               31    2    194    0.008  0.00315    0.002   1.65   1.79
+Isend               31    3    202    0.005  0.00293    0.002   1.62   1.75
+Isend               31    4    190    0.004  0.00294    0.002   1.51   1.63
+Isend               31    5    212    0.006  0.00306    0.002   1.76   1.90
+Isend               31    6    212    0.014  0.00308    0.002   1.76   1.90
+Isend               31    7    251    0.015  0.00657    0.002   4.46   4.87
+Isend               31    8    266    0.014  0.00534    0.002   3.83   4.19
+Isend               31    9    274    0.013  0.00362    0.002   2.67   2.90
+Isend               31   10    243    0.022  0.00392    0.002   2.57   2.82
+Isend               31   11    106    0.006  0.00284    0.002   0.81   0.88
+Isend               31   12    212    0.013  0.00339    0.002   1.94   2.09
+Isend               31   13    106    0.004  0.00296    0.002   0.85   0.91
+Isend               31   14     74    0.004    0.003    0.002   0.60   0.64
+Isend               31   15     74    0.004  0.00297    0.002   0.59   0.63
+Isend               31    *   2888    0.022  0.00369    0.002   1.80   1.95
+
+Isend               35    0     18    0.016   0.0045    0.003   0.22   0.24
+Isend               35    1     29    0.004  0.00276    0.002   0.22   0.23
+Isend               35    2     22    0.004  0.00309    0.002   0.18   0.20
+Isend               35    3     23    0.004  0.00304    0.002   0.19   0.21
+Isend               35    4     37    0.004  0.00292    0.002   0.29   0.32
+Isend               35    5     38    0.004  0.00289    0.002   0.30   0.32
+Isend               35    6     38    0.012  0.00308    0.002   0.32   0.34
+Isend               35    7     40    0.014  0.00683    0.002   0.74   0.81
+Isend               35    8     41    0.011  0.00551    0.002   0.61   0.67
+Isend               35    9     59    0.013  0.00397    0.002   0.63   0.68
+Isend               35   10     39    0.016  0.00397    0.002   0.42   0.46
+Isend               35   11     19    0.005  0.00311    0.002   0.16   0.17
+Isend               35   12     38    0.016  0.00337    0.002   0.35   0.37
+Isend               35   13     19    0.004  0.00305    0.002   0.16   0.17
+Isend               35   14      3    0.004  0.00367    0.003   0.03   0.03
+Isend               35   15      3    0.004  0.00367    0.003   0.03   0.03
+Isend               35    *    466    0.016  0.00384    0.002   0.30   0.33
+
+Isend               51    0     11    0.021  0.00909    0.003   0.27   0.30
+Isend               51    1     16    0.016  0.00838    0.003   0.36   0.39
+Isend               51    2     16    0.017  0.00869    0.003   0.38   0.41
+Isend               51    3      9    0.014  0.00867    0.003   0.21   0.23
+Isend               51    4      9    0.016  0.00867    0.003   0.21   0.23
+Isend               51    5     16    0.016   0.0085    0.003   0.37   0.40
+Isend               51    6     14    0.012  0.00714    0.003   0.27   0.29
+Isend               51    7      9    0.018   0.0106    0.003   0.26   0.28
+Isend               51    8     11    0.023  0.00755    0.003   0.22   0.24
+Isend               51    9     14    0.027   0.0118    0.003   0.45   0.48
+Isend               51   10     14    0.051   0.0137    0.003   0.52   0.57
+Isend               51   11     11    0.019  0.00773    0.003   0.23   0.25
+Isend               51   12      9    0.013  0.00778    0.003   0.19   0.20
+Isend               51   13     14    0.013  0.00771    0.003   0.29   0.31
+Isend               51   14     16    0.013  0.00788    0.003   0.34   0.36
+Isend               51   15      9    0.013  0.00756    0.003   0.18   0.20
+Isend               51    *    198    0.051  0.00887    0.003   0.30   0.32
+
+Isend               69    1     32    0.005  0.00356    0.003   0.31   0.33
+Isend               69    2     32    0.015  0.00397    0.003   0.34   0.37
+Isend               69    3     32    0.015  0.00378    0.003   0.33   0.36
+Isend               69    4     32    0.015  0.00406    0.003   0.35   0.38
+Isend               69    5     32    0.016    0.004    0.002   0.35   0.37
+Isend               69    6     32    0.015  0.00372    0.003   0.32   0.35
+Isend               69    7     32    0.016  0.00416    0.003   0.36   0.39
+Isend               69    8     32    0.043    0.012    0.008   1.03   1.13
+Isend               69    9     32    0.016  0.00381    0.003   0.33   0.36
+Isend               69   10     32    0.014  0.00419    0.003   0.36   0.40
+Isend               69   11     32    0.014  0.00397    0.003   0.34   0.37
+Isend               69   12     32    0.015  0.00416    0.003   0.36   0.39
+Isend               69   13     32    0.015  0.00381    0.003   0.33   0.35
+Isend               69   14     32    0.015  0.00384    0.003   0.33   0.35
+Isend               69   15     32    0.014  0.00397    0.003   0.34   0.37
+Isend               69    *    480    0.043  0.00446        0   0.36   0.39
+
+Isend               70    1      9    0.004  0.00322    0.002   0.08   0.08
+Isend               70    2      5    0.005   0.0044    0.003   0.06   0.06
+Isend               70    3      3    0.005  0.00433    0.004   0.04   0.04
+Isend               70    4      7    0.004  0.00343    0.003   0.06   0.07
+Isend               70    5      5     0.01   0.0052    0.003   0.07   0.08
+Isend               70    6      1    0.004    0.004    0.004   0.01   0.01
+Isend               70    7      3    0.012  0.00667    0.004   0.05   0.06
+Isend               70    8      5    0.011   0.0092    0.005   0.12   0.14
+Isend               70    9      3    0.009  0.00567    0.004   0.05   0.05
+Isend               70   10      7    0.005  0.00429    0.002   0.08   0.09
+Isend               70   11      5    0.005    0.004    0.003   0.05   0.06
+Isend               70   12      7    0.004  0.00357    0.003   0.07   0.07
+Isend               70   13      7    0.005    0.004    0.003   0.08   0.08
+Isend               70   14      7    0.004  0.00343    0.003   0.06   0.07
+Isend               70   15      8    0.004  0.00325    0.003   0.07   0.07
+Isend               70    *     82    0.012  0.00432        0   0.06   0.06
+
+Recv                20    0      4    0.041   0.0257    0.007   0.28   0.31
+Recv                20    2      5    0.007   0.0052    0.004   0.07   0.08
+Recv                20    3      7    0.045   0.0156    0.003   0.30   0.32
+Recv                20    4      3    0.004  0.00367    0.003   0.03   0.03
+Recv                20    5      5    0.009   0.0054    0.003   0.07   0.08
+Recv                20    6      7    0.038   0.0141    0.003   0.27   0.29
+Recv                20    7      5    0.083    0.036    0.008   0.49   0.53
+Recv                20    8      5    0.031    0.011    0.003   0.15   0.16
+Recv                20    9      9     0.03  0.00733    0.003   0.18   0.19
+Recv                20   10      7    0.044    0.011    0.003   0.21   0.23
+Recv                20   11      7    0.041   0.0129    0.003   0.24   0.26
+Recv                20   12      5    0.005    0.004    0.003   0.05   0.06
+Recv                20   13      7     0.03    0.007    0.003   0.13   0.14
+Recv                20   14      5    0.035   0.0144    0.005   0.19   0.21
+Recv                20   15      1    0.005    0.005    0.005   0.01   0.01
+Recv                20    *     82    0.083   0.0121        0   0.17   0.18
+
+Recv                38    0     38    0.022  0.00497    0.003   0.51   0.57
+Recv                38    1     53    0.021  0.00408    0.002   0.58   0.63
+Recv                38    2     62    0.016  0.00402    0.002   0.67   0.73
+Recv                38    3     60    0.021  0.00387    0.002   0.64   0.69
+Recv                38    4     51    0.017  0.00353    0.002   0.49   0.53
+Recv                38    5     70    0.016  0.00367    0.002   0.70   0.75
+Recv                38    6     75    0.015   0.0036    0.002   0.73   0.79
+Recv                38    7     78    0.016  0.00367    0.002   0.77   0.84
+Recv                38    8     80    0.018  0.00381    0.002   0.82   0.90
+Recv                38    9     72    0.016  0.00386    0.002   0.75   0.81
+Recv                38   10     65    0.026  0.00438    0.002   0.77   0.84
+Recv                38   11     45    0.049  0.00529    0.002   0.64   0.69
+Recv                38   12     50    0.016   0.0037    0.003   0.50   0.54
+Recv                38   13     40    0.015  0.00382    0.003   0.41   0.44
+Recv                38   14     37    0.015  0.00408    0.003   0.41   0.43
+Recv                38   15     28    0.015  0.00414    0.003   0.31   0.33
+Recv                38    *    904    0.049  0.00397    0.002   0.61   0.66
+
+Reduce              32    0      2    0.019   0.0185    0.018   0.10   0.11
+Reduce              32    1      2    0.006    0.006    0.006   0.03   0.04
+Reduce              32    2      2    0.007    0.006    0.005   0.03   0.04
+Reduce              32    3      2    0.007    0.006    0.005   0.03   0.04
+Reduce              32    4      2    0.007    0.006    0.005   0.03   0.04
+Reduce              32    5      2    0.006   0.0055    0.005   0.03   0.03
+Reduce              32    6      2    0.005   0.0045    0.004   0.02   0.03
+Reduce              32    7      2    0.008   0.0065    0.005   0.04   0.04
+Reduce              32    8      2    0.009    0.008    0.007   0.04   0.05
+Reduce              32    9      2    0.004   0.0035    0.003   0.02   0.02
+Reduce              32   10      2    0.007    0.007    0.007   0.04   0.04
+Reduce              32   11      2    0.005   0.0045    0.004   0.02   0.03
+Reduce              32   12      2    0.005    0.005    0.005   0.03   0.03
+Reduce              32   13      2    0.009    0.007    0.005   0.04   0.04
+Reduce              32   14      2    0.009    0.008    0.007   0.04   0.05
+Reduce              32   15      2    0.006   0.0055    0.005   0.03   0.03
+Reduce              32    *     32    0.019  0.00672    0.003   0.04   0.04
+
+Reduce              66    0      3    0.048    0.038    0.025   0.31   0.34
+Reduce              66    1      3    0.034   0.0157    0.006   0.13   0.14
+Reduce              66    2      3    0.046   0.0193    0.005   0.16   0.17
+Reduce              66    3      3    0.049   0.0217    0.007   0.18   0.19
+Reduce              66    4      3    0.051    0.022    0.006   0.18   0.19
+Reduce              66    5      3    0.056    0.022    0.004   0.18   0.19
+Reduce              66    6      3    0.062   0.0243    0.005   0.20   0.21
+Reduce              66    7      3    0.066    0.028    0.007   0.23   0.25
+Reduce              66    8      3     0.07    0.032    0.013   0.26   0.28
+Reduce              66    9      3    0.029   0.0127    0.004   0.10   0.11
+Reduce              66   10      3    0.031   0.0147    0.005   0.12   0.13
+Reduce              66   11      3    0.044   0.0187    0.005   0.15   0.16
+Reduce              66   12      3     0.06   0.0237    0.005   0.19   0.21
+Reduce              66   13      3    0.058    0.024    0.006   0.19   0.21
+Reduce              66   14      3    0.052    0.021    0.005   0.17   0.18
+Reduce              66   15      3    0.061   0.0247    0.006   0.20   0.21
+Reduce              66    *     48     0.07   0.0226    0.004   0.18   0.20
+
+Scan                 8    0      4    0.135    0.102     0.09   1.10   1.22
+Scan                 8    1      4    0.114   0.0783    0.064   0.85   0.91
+Scan                 8    2      4    0.128      0.1     0.09   1.08   1.17
+Scan                 8    3      4    0.129    0.107    0.096   1.17   1.27
+Scan                 8    4      4    0.127    0.114      0.1   1.23   1.32
+Scan                 8    5      4    0.129    0.113    0.106   1.22   1.32
+Scan                 8    6      4     0.12    0.109    0.102   1.18   1.27
+Scan                 8    7      4    0.118   0.0813    0.066   0.88   0.96
+Scan                 8    8      4    0.081   0.0575    0.048   0.62   0.68
+Scan                 8    9      4    0.079    0.047    0.035   0.51   0.55
+Scan                 8   10      4    0.073    0.044    0.033   0.47   0.52
+Scan                 8   11      4    0.101   0.0658    0.053   0.71   0.76
+Scan                 8   12      4    0.071   0.0457    0.034   0.49   0.53
+Scan                 8   13      4    0.075    0.047    0.036   0.51   0.54
+Scan                 8   14      4    0.073    0.044    0.033   0.47   0.51
+Scan                 8   15      4    0.071    0.043    0.032   0.46   0.50
+Scan                 8    *     64    0.135   0.0748    0.032   0.81   0.88
+
+Send                16    0    128    0.013  0.00495    0.002   1.71   1.90
+Send                16    2     32    0.004  0.00331    0.003   0.29   0.31
+Send                16    4     64    0.004  0.00302    0.002   0.52   0.56
+Send                16    6     32    0.004  0.00309    0.002   0.27   0.29
+Send                16    8     96    0.004  0.00309    0.002   0.80   0.88
+Send                16   10     32    0.011  0.00356    0.003   0.31   0.34
+Send                16   12     64    0.004  0.00298    0.002   0.52   0.56
+Send                16   14     32    0.004  0.00316    0.003   0.27   0.29
+Send                16    *    480    0.013  0.00361        0   0.29   0.32
+
+Send                27    0      4    0.012  0.00525    0.002   0.06   0.06
+Send                27    2      1    0.003    0.003    0.003   0.01   0.01
+Send                27    4      2    0.003   0.0025    0.002   0.01   0.01
+Send                27    6      1    0.003    0.003    0.003   0.01   0.01
+Send                27    8      3    0.003  0.00267    0.002   0.02   0.02
+Send                27   10      1    0.003    0.003    0.003   0.01   0.01
+Send                27   12      2    0.003    0.003    0.003   0.02   0.02
+Send                27   14      1    0.003    0.003    0.003   0.01   0.01
+Send                27    *     15    0.012  0.00347        0   0.01   0.01
+
+Send                33    0     38    0.014    0.006    0.003   0.62   0.68
+Send                33    1     53    0.017  0.00613    0.003   0.88   0.95
+Send                33    2     62    0.017  0.00587    0.003   0.98   1.07
+Send                33    3     60    0.017    0.005    0.003   0.82   0.89
+Send                33    4     51    0.015  0.00496    0.002   0.68   0.74
+Send                33    5     70    0.017  0.00571    0.002   1.08   1.17
+Send                33    6     75    0.014  0.00535    0.002   1.08   1.17
+Send                33    7     78    0.018  0.00758    0.003   1.60   1.75
+Send                33    8     80    0.031  0.00649    0.002   1.40   1.53
+Send                33    9     72    0.024  0.00574    0.002   1.11   1.21
+Send                33   10     65    0.025  0.00643    0.002   1.13   1.24
+Send                33   11     45    0.033  0.00742    0.002   0.90   0.97
+Send                33   12     50    0.026  0.00618    0.003   0.83   0.90
+Send                33   13     40    0.025  0.00628    0.003   0.68   0.73
+Send                33   14     37    0.025  0.00622    0.003   0.62   0.66
+Send                33   15     28    0.025  0.00664    0.003   0.50   0.54
+Send                33    *    904    0.033  0.00611    0.002   0.93   1.01
+
+Send                68    1      1    0.003    0.003    0.003   0.01   0.01
+Send                68    2      1    0.004    0.004    0.004   0.01   0.01
+Send                68    3      1    0.003    0.003    0.003   0.01   0.01
+Send                68    4      1    0.004    0.004    0.004   0.01   0.01
+Send                68    5      1    0.003    0.003    0.003   0.01   0.01
+Send                68    6      1    0.004    0.004    0.004   0.01   0.01
+Send                68    7      1    0.004    0.004    0.004   0.01   0.01
+Send                68    8      1    0.011    0.011    0.011   0.03   0.03
+Send                68    9      1    0.003    0.003    0.003   0.01   0.01
+Send                68   10      1    0.004    0.004    0.004   0.01   0.01
+Send                68   11      1    0.003    0.003    0.003   0.01   0.01
+Send                68   12      1    0.004    0.004    0.004   0.01   0.01
+Send                68   13      1    0.004    0.004    0.004   0.01   0.01
+Send                68   14      1    0.003    0.003    0.003   0.01   0.01
+Send                68   15      1    0.004    0.004    0.004   0.01   0.01
+Send                68    *     15    0.011  0.00407        0   0.01   0.01
+
+Test                42    0      1    0.013    0.013    0.013   0.04   0.04
+Test                42    1      6    0.008    0.007    0.004   0.11   0.12
+Test                42    2      5    0.009    0.007    0.003   0.09   0.10
+Test                42    3      5    0.008    0.008    0.008   0.11   0.12
+Test                42    4      5    0.008   0.0066    0.003   0.09   0.10
+Test                42    5      6    0.008    0.007    0.004   0.11   0.12
+Test                42    6      6    0.009  0.00733    0.003   0.12   0.13
+Test                42    7      6    0.011  0.00783    0.004   0.13   0.14
+Test                42    8      6    0.005  0.00417    0.004   0.07   0.07
+Test                42    9      7    0.009  0.00714    0.003   0.13   0.15
+Test                42   10      7    0.009  0.00729    0.004   0.14   0.15
+Test                42   11      7    0.018  0.00871    0.004   0.16   0.18
+Test                42   12      6    0.009  0.00817    0.004   0.13   0.14
+Test                42   13      7    0.009    0.008    0.004   0.15   0.16
+Test                42   14      8    0.009    0.008    0.004   0.17   0.18
+Test                42   15      8    0.009  0.00788    0.003   0.17   0.18
+Test                42    *     96    0.018  0.00745    0.003   0.12   0.13
+
+Test                73    1    453    0.048  0.00815    0.003   9.97  10.77
+Test                73    2    392    0.035  0.00847    0.003   8.98   9.73
+Test                73    3    451    0.018  0.00812    0.003  10.02  10.87
+Test                73    4    256    0.018  0.00805    0.003   5.57   6.01
+Test                73    5    404    0.018  0.00814    0.003   8.89   9.63
+Test                73    6    309    0.023  0.00826    0.003   6.90   7.45
+Test                73    7    318    0.031  0.00858    0.003   7.38   8.06
+Test                73    8    262    0.021  0.00442    0.003   3.12   3.41
+Test                73    9    402    0.022  0.00791    0.003   8.57   9.29
+Test                73   10    363    0.023  0.00823    0.003   8.06   8.83
+Test                73   11    410    0.023  0.00833    0.003   9.21   9.93
+Test                73   12    360    0.017  0.00826    0.003   8.02   8.66
+Test                73   13    450    0.018  0.00816    0.003   9.91  10.63
+Test                73   14    513    0.017  0.00808    0.003  11.19  11.92
+Test                73   15    543    0.018  0.00818    0.003  11.98  12.80
+Test                73    *   5886    0.048  0.00803        0   7.99   8.65
+
+Testall             26    0      5    0.012    0.006    0.004   0.08   0.09
+Testall             26    1      1    0.003    0.003    0.003   0.01   0.01
+Testall             26    2      1    0.005    0.005    0.005   0.01   0.01
+Testall             26    3      1    0.004    0.004    0.004   0.01   0.01
+Testall             26    4      2    0.004    0.004    0.004   0.02   0.02
+Testall             26    5      1    0.003    0.003    0.003   0.01   0.01
+Testall             26    6      1    0.004    0.004    0.004   0.01   0.01
+Testall             26    7      1    0.004    0.004    0.004   0.01   0.01
+Testall             26    8      2    0.008   0.0075    0.007   0.04   0.04
+Testall             26    9      1    0.003    0.003    0.003   0.01   0.01
+Testall             26   10      1    0.006    0.006    0.006   0.02   0.02
+Testall             26   11      1    0.003    0.003    0.003   0.01   0.01
+Testall             26   12      2    0.004    0.004    0.004   0.02   0.02
+Testall             26   13      1    0.004    0.004    0.004   0.01   0.01
+Testall             26   14      1    0.005    0.005    0.005   0.01   0.01
+Testall             26   15      1    0.004    0.004    0.004   0.01   0.01
+Testall             26    *     23    0.012  0.00474    0.003   0.02   0.02
+
+Testall             44    0    470     0.03  0.00772    0.003   9.82  10.87
+Testall             44    1     32    0.006  0.00353    0.003   0.31   0.33
+Testall             44    2     63    0.019  0.00686    0.003   1.17   1.27
+Testall             44    3     32    0.023  0.00413    0.003   0.36   0.39
+Testall             44    4    214    0.024  0.00724    0.003   4.19   4.52
+Testall             44    5     32    0.022  0.00413    0.003   0.36   0.39
+Testall             44    6    107     0.02  0.00699    0.003   2.02   2.18
+Testall             44    7     32    0.022    0.004    0.003   0.35   0.38
+Testall             44    8    142     0.02  0.00744    0.003   2.85   3.12
+Testall             44    9     32    0.015  0.00375    0.003   0.32   0.35
+Testall             44   10     43    0.024  0.00556    0.003   0.64   0.71
+Testall             44   11     32    0.012  0.00366    0.003   0.32   0.34
+Testall             44   12     78    0.016   0.0061    0.003   1.28   1.39
+Testall             44   13     32    0.015  0.00378    0.003   0.33   0.35
+Testall             44   14     45    0.022  0.00627    0.003   0.76   0.81
+Testall             44   15     32    0.014  0.00397    0.003   0.34   0.37
+Testall             44    *   1418     0.03  0.00663    0.003   1.59   1.72
+
+Testall             53    0     33    0.029   0.0114    0.004   1.01   1.12
+Testall             53    1     46    0.016  0.00654    0.003   0.81   0.88
+Testall             53    2     44     0.03  0.00816    0.003   0.97   1.05
+Testall             53    3     42    0.016  0.00657    0.003   0.76   0.82
+Testall             53    4     54    0.021  0.00783    0.003   1.14   1.23
+Testall             53    5     55    0.013  0.00613    0.003   0.91   0.99
+Testall             53    6     61    0.033  0.00782    0.003   1.29   1.39
+Testall             53    7     78    0.013   0.0059    0.003   1.24   1.36
+Testall             53    8     66    0.021  0.00861    0.003   1.53   1.68
+Testall             53    9     57    0.021  0.00681    0.003   1.05   1.13
+Testall             53   10     60    0.018  0.00825    0.003   1.34   1.46
+Testall             53   11     70    0.025  0.00774    0.003   1.46   1.58
+Testall             53   12     74    0.018   0.0072    0.003   1.44   1.55
+Testall             53   13     65    0.014  0.00632    0.003   1.11   1.19
+Testall             53   14     38    0.022  0.00905    0.003   0.93   0.99
+Testall             53   15     43    0.018  0.00737    0.003   0.86   0.91
+Testall             53    *    886    0.033  0.00746    0.003   1.12   1.21
+
+Wait                71    1     32    0.015  0.00341    0.002   0.29   0.32
+Wait                71    2     32    0.015  0.00344    0.002   0.30   0.32
+Wait                71    3     32    0.015    0.004    0.003   0.35   0.38
+Wait                71    4     32    0.014  0.00337    0.002   0.29   0.32
+Wait                71    5     32    0.013  0.00322    0.002   0.28   0.30
+Wait                71    6     32    0.014  0.00325    0.002   0.28   0.30
+Wait                71    7     32    0.014   0.0035    0.003   0.30   0.33
+Wait                71    8     32    0.015  0.00334    0.002   0.29   0.32
+Wait                71    9     32    0.013  0.00337    0.003   0.29   0.32
+Wait                71   10     32    0.014  0.00328    0.002   0.28   0.31
+Wait                71   11     32    0.014  0.00331    0.002   0.29   0.31
+Wait                71   12     32    0.015  0.00356    0.003   0.31   0.33
+Wait                71   13     32    0.013  0.00347    0.002   0.30   0.32
+Wait                71   14     32    0.014  0.00337    0.002   0.29   0.31
+Wait                71   15     32    0.013  0.00337    0.003   0.29   0.31
+Wait                71    *    480    0.015  0.00342        0   0.28   0.30
+
+Waitall             15    0      7    0.007  0.00386    0.003   0.07   0.08
+Waitall             15    1      7    0.005  0.00357    0.003   0.07   0.07
+Waitall             15    2      7    0.004  0.00329    0.003   0.06   0.07
+Waitall             15    3      7    0.004  0.00314    0.002   0.06   0.07
+Waitall             15    4      7    0.004  0.00314    0.002   0.06   0.06
+Waitall             15    5      7    0.005  0.00343    0.003   0.06   0.07
+Waitall             15    6      7    0.005  0.00314    0.002   0.06   0.06
+Waitall             15    7      7    0.004  0.00357    0.003   0.07   0.07
+Waitall             15    8      7    0.005  0.00386    0.003   0.07   0.08
+Waitall             15    9      7    0.004  0.00343    0.003   0.06   0.07
+Waitall             15   10      7    0.006  0.00386    0.003   0.07   0.08
+Waitall             15   11      7    0.004  0.00329    0.003   0.06   0.07
+Waitall             15   12      7    0.004  0.00343    0.003   0.06   0.07
+Waitall             15   13      7    0.004  0.00343    0.003   0.06   0.07
+Waitall             15   14      7    0.004  0.00329    0.003   0.06   0.07
+Waitall             15   15      7    0.004  0.00343    0.003   0.06   0.07
+Waitall             15    *    112    0.007  0.00345    0.002   0.07   0.07
+
+Waitall             29    0      8    0.005  0.00375    0.003   0.08   0.09
+Waitall             29    1      8    0.004  0.00325    0.003   0.07   0.08
+Waitall             29    2      8    0.016  0.00487    0.003   0.11   0.11
+Waitall             29    3      8    0.016  0.00562    0.003   0.12   0.13
+Waitall             29    4      8    0.015  0.00487    0.003   0.11   0.11
+Waitall             29    5      8    0.016  0.00487    0.003   0.11   0.11
+Waitall             29    6      8    0.016    0.005    0.003   0.11   0.12
+Waitall             29    7      8    0.016    0.005    0.003   0.11   0.12
+Waitall             29    8      8    0.016  0.00462    0.002   0.10   0.11
+Waitall             29    9      8    0.018  0.00487    0.003   0.11   0.11
+Waitall             29   10      8    0.015  0.00462    0.002   0.10   0.11
+Waitall             29   11      8    0.015  0.00462    0.002   0.10   0.11
+Waitall             29   12      8    0.017    0.005    0.003   0.11   0.12
+Waitall             29   13      8    0.015  0.00462    0.002   0.10   0.11
+Waitall             29   14      8    0.015   0.0045    0.002   0.10   0.10
+Waitall             29   15      8    0.015  0.00487    0.003   0.11   0.11
+Waitall             29    *    128    0.018  0.00469    0.002   0.10   0.11
+
+Waitall             50    0      1    0.003    0.003    0.003   0.01   0.01
+Waitall             50    1      1    0.003    0.003    0.003   0.01   0.01
+Waitall             50    2      1    0.004    0.004    0.004   0.01   0.01
+Waitall             50    3      1    0.003    0.003    0.003   0.01   0.01
+Waitall             50    4      1    0.004    0.004    0.004   0.01   0.01
+Waitall             50    5      1    0.004    0.004    0.004   0.01   0.01
+Waitall             50    6      1    0.003    0.003    0.003   0.01   0.01
+Waitall             50    7      1    0.003    0.003    0.003   0.01   0.01
+Waitall             50    8      1    0.004    0.004    0.004   0.01   0.01
+Waitall             50    9      1    0.003    0.003    0.003   0.01   0.01
+Waitall             50   10      1    0.003    0.003    0.003   0.01   0.01
+Waitall             50   11      1    0.003    0.003    0.003   0.01   0.01
+Waitall             50   12      1    0.004    0.004    0.004   0.01   0.01
+Waitall             50   13      1    0.004    0.004    0.004   0.01   0.01
+Waitall             50   14      1    0.004    0.004    0.004   0.01   0.01
+Waitall             50   15      1    0.004    0.004    0.004   0.01   0.01
+Waitall             50    *     16    0.004   0.0035    0.003   0.01   0.01
+
+Waitall             56    0     18    0.017  0.00444    0.003   0.22   0.24
+Waitall             56    1     18    0.016  0.00378    0.003   0.18   0.20
+Waitall             56    2     18    0.004  0.00322    0.003   0.16   0.17
+Waitall             56    3     18    0.007  0.00444    0.003   0.22   0.24
+Waitall             56    4     18    0.003  0.00289    0.002   0.14   0.15
+Waitall             56    5     18     0.01  0.00339    0.002   0.16   0.18
+Waitall             56    6     18    0.004  0.00306    0.002   0.15   0.16
+Waitall             56    7     18    0.004  0.00311    0.003   0.15   0.17
+Waitall             56    8     18    0.004  0.00322    0.003   0.16   0.17
+Waitall             56    9     16    0.005  0.00331    0.003   0.14   0.15
+Waitall             56   10     18    0.011  0.00372    0.003   0.18   0.20
+Waitall             56   11     18    0.004    0.003    0.002   0.15   0.16
+Waitall             56   12     18    0.004  0.00322    0.003   0.16   0.17
+Waitall             56   13     18    0.004  0.00317    0.003   0.15   0.17
+Waitall             56   14     12    0.004  0.00308    0.003   0.10   0.11
+Waitall             56   15     12    0.005  0.00333    0.003   0.11   0.12
+Waitall             56    *    274    0.017  0.00341    0.002   0.16   0.17
+
+Waitall             61    0    186    0.095   0.0142    0.002   7.15   7.91
+Waitall             61    1    186    0.091   0.0119    0.002   5.99   6.47
+Waitall             61    2    186    0.088   0.0131    0.003   6.59   7.14
+Waitall             61    3    186    0.089   0.0157    0.002   8.00   8.68
+Waitall             61    4    186    0.077    0.019    0.003   9.56  10.31
+Waitall             61    5    186    0.077   0.0221    0.003  11.11  12.03
+Waitall             61    6    186    0.074   0.0291    0.003  14.62  15.78
+Waitall             61    7    186    0.068   0.0247    0.007  12.42  13.57
+Waitall             61    8    186    0.099   0.0238    0.007  11.95  13.08
+Waitall             61    9    176    0.132   0.0216    0.003  10.25  11.12
+Waitall             61   10    186    0.093   0.0187    0.003   9.36  10.25
+Waitall             61   11    186      0.1   0.0265    0.003  13.31  14.34
+Waitall             61   12    186      0.1   0.0233    0.003  11.67  12.59
+Waitall             61   13    186    0.091   0.0266    0.004  13.35  14.32
+Waitall             61   14    142    0.011  0.00378    0.003   1.45   1.54
+Waitall             61   15    142    0.016   0.0038    0.003   1.45   1.55
+Waitall             61    *   2878    0.132   0.0191    0.002   9.27  10.03
+
+---------------------------------------------------------------------------
+@--- Callsite Message Sent statistics (all, sent bytes) -------------------
+---------------------------------------------------------------------------
+Name              Site Rank   Count       Max      Mean       Min       Sum
+Allgather           21    0       8         4         4         4        32
+Allgather           21    1       8         4         4         4        32
+Allgather           21    2       8         4         4         4        32
+Allgather           21    3       8         4         4         4        32
+Allgather           21    4       8         4         4         4        32
+Allgather           21    5       8         4         4         4        32
+Allgather           21    6       8         4         4         4        32
+Allgather           21    7       8         4         4         4        32
+Allgather           21    8       8         4         4         4        32
+Allgather           21    9       8         4         4         4        32
+Allgather           21   10       8         4         4         4        32
+Allgather           21   11       8         4         4         4        32
+Allgather           21   12       8         4         4         4        32
+Allgather           21   13       8         4         4         4        32
+Allgather           21   14       8         4         4         4        32
+Allgather           21   15       8         4         4         4        32
+Allgather           21    *     128         4         4         4       512
+
+Allgather           37    0       1         8         8         8         8
+Allgather           37    1       1         8         8         8         8
+Allgather           37    2       1         8         8         8         8
+Allgather           37    3       1         8         8         8         8
+Allgather           37    4       1         8         8         8         8
+Allgather           37    5       1         8         8         8         8
+Allgather           37    6       1         8         8         8         8
+Allgather           37    7       1         8         8         8         8
+Allgather           37    8       1         8         8         8         8
+Allgather           37    9       1         8         8         8         8
+Allgather           37   10       1         8         8         8         8
+Allgather           37   11       1         8         8         8         8
+Allgather           37   12       1         8         8         8         8
+Allgather           37   13       1         8         8         8         8
+Allgather           37   14       1         8         8         8         8
+Allgather           37   15       1         8         8         8         8
+Allgather           37    *      16         8         8         8       128
+
+Allgather           47    0       1         8         8         8         8
+Allgather           47    1       1         8         8         8         8
+Allgather           47    2       1         8         8         8         8
+Allgather           47    3       1         8         8         8         8
+Allgather           47    4       1         8         8         8         8
+Allgather           47    5       1         8         8         8         8
+Allgather           47    6       1         8         8         8         8
+Allgather           47    7       1         8         8         8         8
+Allgather           47    8       1         8         8         8         8
+Allgather           47    9       1         8         8         8         8
+Allgather           47   10       1         8         8         8         8
+Allgather           47   11       1         8         8         8         8
+Allgather           47   12       1         8         8         8         8
+Allgather           47   13       1         8         8         8         8
+Allgather           47   14       1         8         8         8         8
+Allgather           47   15       1         8         8         8         8
+Allgather           47    *      16         8         8         8       128
+
+Allgatherv          41    0       8        28       3.5         0        28
+Allgatherv          41    1       8        28       3.5         0        28
+Allgatherv          41    2       8        28       3.5         0        28
+Allgatherv          41    3       8        28       3.5         0        28
+Allgatherv          41    4       8        28       3.5         0        28
+Allgatherv          41    5       8        28       3.5         0        28
+Allgatherv          41    6       8        28       3.5         0        28
+Allgatherv          41    7       8        28       3.5         0        28
+Allgatherv          41    8       8        28       3.5         0        28
+Allgatherv          41    9       8        28       3.5         0        28
+Allgatherv          41   10       8        28       3.5         0        28
+Allgatherv          41   11       8        28       3.5         0        28
+Allgatherv          41   12       8        28       3.5         0        28
+Allgatherv          41   13       8        28       3.5         0        28
+Allgatherv          41   14       8        28       3.5         0        28
+Allgatherv          41   15       8        28       3.5         0        28
+Allgatherv          41    *     128        28       3.5         0       448
+
+Allreduce            3    0       3         8         8         8        24
+Allreduce            3    1       3         8         8         8        24
+Allreduce            3    2       3         8         8         8        24
+Allreduce            3    3       3         8         8         8        24
+Allreduce            3    4       3         8         8         8        24
+Allreduce            3    5       3         8         8         8        24
+Allreduce            3    6       3         8         8         8        24
+Allreduce            3    7       3         8         8         8        24
+Allreduce            3    8       3         8         8         8        24
+Allreduce            3    9       3         8         8         8        24
+Allreduce            3   10       3         8         8         8        24
+Allreduce            3   11       3         8         8         8        24
+Allreduce            3   12       3         8         8         8        24
+Allreduce            3   13       3         8         8         8        24
+Allreduce            3   14       3         8         8         8        24
+Allreduce            3   15       3         8         8         8        24
+Allreduce            3    *      48         8         8         8       384
+
+Allreduce            6    0      41         8         8         8       328
+Allreduce            6    1      41         8         8         8       328
+Allreduce            6    2      41         8         8         8       328
+Allreduce            6    3      41         8         8         8       328
+Allreduce            6    4      41         8         8         8       328
+Allreduce            6    5      41         8         8         8       328
+Allreduce            6    6      41         8         8         8       328
+Allreduce            6    7      41         8         8         8       328
+Allreduce            6    8      41         8         8         8       328
+Allreduce            6    9      41         8         8         8       328
+Allreduce            6   10      41         8         8         8       328
+Allreduce            6   11      41         8         8         8       328
+Allreduce            6   12      41         8         8         8       328
+Allreduce            6   13      41         8         8         8       328
+Allreduce            6   14      41         8         8         8       328
+Allreduce            6   15      41         8         8         8       328
+Allreduce            6    *     656         8         8         8      5248
+
+Allreduce            9    0       8        16        16        16       128
+Allreduce            9    1       8        16        16        16       128
+Allreduce            9    2       8        16        16        16       128
+Allreduce            9    3       8        16        16        16       128
+Allreduce            9    4       8        16        16        16       128
+Allreduce            9    5       8        16        16        16       128
+Allreduce            9    6       8        16        16        16       128
+Allreduce            9    7       8        16        16        16       128
+Allreduce            9    8       8        16        16        16       128
+Allreduce            9    9       8        16        16        16       128
+Allreduce            9   10       8        16        16        16       128
+Allreduce            9   11       8        16        16        16       128
+Allreduce            9   12       8        16        16        16       128
+Allreduce            9   13       8        16        16        16       128
+Allreduce            9   14       8        16        16        16       128
+Allreduce            9   15       8        16        16        16       128
+Allreduce            9    *     128        16        16        16      2048
+
+Allreduce           10    0       2         4         4         4         8
+Allreduce           10    1       2         4         4         4         8
+Allreduce           10    2       2         4         4         4         8
+Allreduce           10    3       2         4         4         4         8
+Allreduce           10    4       2         4         4         4         8
+Allreduce           10    5       2         4         4         4         8
+Allreduce           10    6       2         4         4         4         8
+Allreduce           10    7       2         4         4         4         8
+Allreduce           10    8       2         4         4         4         8
+Allreduce           10    9       2         4         4         4         8
+Allreduce           10   10       2         4         4         4         8
+Allreduce           10   11       2         4         4         4         8
+Allreduce           10   12       2         4         4         4         8
+Allreduce           10   13       2         4         4         4         8
+Allreduce           10   14       2         4         4         4         8
+Allreduce           10   15       2         4         4         4         8
+Allreduce           10    *      32         4         4         4       128
+
+Allreduce           12    0       8        32        32        32       256
+Allreduce           12    1       8        32        32        32       256
+Allreduce           12    2       8        32        32        32       256
+Allreduce           12    3       8        32        32        32       256
+Allreduce           12    4       8        32        32        32       256
+Allreduce           12    5       8        32        32        32       256
+Allreduce           12    6       8        32        32        32       256
+Allreduce           12    7       8        32        32        32       256
+Allreduce           12    8       8        32        32        32       256
+Allreduce           12    9       8        32        32        32       256
+Allreduce           12   10       8        32        32        32       256
+Allreduce           12   11       8        32        32        32       256
+Allreduce           12   12       8        32        32        32       256
+Allreduce           12   13       8        32        32        32       256
+Allreduce           12   14       8        32        32        32       256
+Allreduce           12   15       8        32        32        32       256
+Allreduce           12    *     128        32        32        32      4096
+
+Allreduce           19    0       3         8         8         8        24
+Allreduce           19    1       3         8         8         8        24
+Allreduce           19    2       3         8         8         8        24
+Allreduce           19    3       3         8         8         8        24
+Allreduce           19    4       3         8         8         8        24
+Allreduce           19    5       3         8         8         8        24
+Allreduce           19    6       3         8         8         8        24
+Allreduce           19    7       3         8         8         8        24
+Allreduce           19    8       3         8         8         8        24
+Allreduce           19    9       3         8         8         8        24
+Allreduce           19   10       3         8         8         8        24
+Allreduce           19   11       3         8         8         8        24
+Allreduce           19   12       3         8         8         8        24
+Allreduce           19   13       3         8         8         8        24
+Allreduce           19   14       3         8         8         8        24
+Allreduce           19   15       3         8         8         8        24
+Allreduce           19    *      48         8         8         8       384
+
+Allreduce           22    0       3         8         8         8        24
+Allreduce           22    1       3         8         8         8        24
+Allreduce           22    2       3         8         8         8        24
+Allreduce           22    3       3         8         8         8        24
+Allreduce           22    4       3         8         8         8        24
+Allreduce           22    5       3         8         8         8        24
+Allreduce           22    6       3         8         8         8        24
+Allreduce           22    7       3         8         8         8        24
+Allreduce           22    8       3         8         8         8        24
+Allreduce           22    9       3         8         8         8        24
+Allreduce           22   10       3         8         8         8        24
+Allreduce           22   11       3         8         8         8        24
+Allreduce           22   12       3         8         8         8        24
+Allreduce           22   13       3         8         8         8        24
+Allreduce           22   14       3         8         8         8        24
+Allreduce           22   15       3         8         8         8        24
+Allreduce           22    *      48         8         8         8       384
+
+Allreduce           30    0       1         4         4         4         4
+Allreduce           30    1       1         4         4         4         4
+Allreduce           30    2       1         4         4         4         4
+Allreduce           30    3       1         4         4         4         4
+Allreduce           30    4       1         4         4         4         4
+Allreduce           30    5       1         4         4         4         4
+Allreduce           30    6       1         4         4         4         4
+Allreduce           30    7       1         4         4         4         4
+Allreduce           30    8       1         4         4         4         4
+Allreduce           30    9       1         4         4         4         4
+Allreduce           30   10       1         4         4         4         4
+Allreduce           30   11       1         4         4         4         4
+Allreduce           30   12       1         4         4         4         4
+Allreduce           30   13       1         4         4         4         4
+Allreduce           30   14       1         4         4         4         4
+Allreduce           30   15       1         4         4         4         4
+Allreduce           30    *      16         4         4         4        64
+
+Allreduce           40    0       8         8         8         8        64
+Allreduce           40    1       8         8         8         8        64
+Allreduce           40    2       8         8         8         8        64
+Allreduce           40    3       8         8         8         8        64
+Allreduce           40    4       8         8         8         8        64
+Allreduce           40    5       8         8         8         8        64
+Allreduce           40    6       8         8         8         8        64
+Allreduce           40    7       8         8         8         8        64
+Allreduce           40    8       8         8         8         8        64
+Allreduce           40    9       8         8         8         8        64
+Allreduce           40   10       8         8         8         8        64
+Allreduce           40   11       8         8         8         8        64
+Allreduce           40   12       8         8         8         8        64
+Allreduce           40   13       8         8         8         8        64
+Allreduce           40   14       8         8         8         8        64
+Allreduce           40   15       8         8         8         8        64
+Allreduce           40    *     128         8         8         8      1024
+
+Allreduce           48    0       1         8         8         8         8
+Allreduce           48    1       1         8         8         8         8
+Allreduce           48    2       1         8         8         8         8
+Allreduce           48    3       1         8         8         8         8
+Allreduce           48    4       1         8         8         8         8
+Allreduce           48    5       1         8         8         8         8
+Allreduce           48    6       1         8         8         8         8
+Allreduce           48    7       1         8         8         8         8
+Allreduce           48    8       1         8         8         8         8
+Allreduce           48    9       1         8         8         8         8
+Allreduce           48   10       1         8         8         8         8
+Allreduce           48   11       1         8         8         8         8
+Allreduce           48   12       1         8         8         8         8
+Allreduce           48   13       1         8         8         8         8
+Allreduce           48   14       1         8         8         8         8
+Allreduce           48   15       1         8         8         8         8
+Allreduce           48    *      16         8         8         8       128
+
+Allreduce           49    0       8         8         8         8        64
+Allreduce           49    1       8         8         8         8        64
+Allreduce           49    2       8         8         8         8        64
+Allreduce           49    3       8         8         8         8        64
+Allreduce           49    4       8         8         8         8        64
+Allreduce           49    5       8         8         8         8        64
+Allreduce           49    6       8         8         8         8        64
+Allreduce           49    7       8         8         8         8        64
+Allreduce           49    8       8         8         8         8        64
+Allreduce           49    9       8         8         8         8        64
+Allreduce           49   10       8         8         8         8        64
+Allreduce           49   11       8         8         8         8        64
+Allreduce           49   12       8         8         8         8        64
+Allreduce           49   13       8         8         8         8        64
+Allreduce           49   14       8         8         8         8        64
+Allreduce           49   15       8         8         8         8        64
+Allreduce           49    *     128         8         8         8      1024
+
+Allreduce           52    0      19         8         8         8       152
+Allreduce           52    1      19         8         8         8       152
+Allreduce           52    2      19         8         8         8       152
+Allreduce           52    3      19         8         8         8       152
+Allreduce           52    4      19         8         8         8       152
+Allreduce           52    5      19         8         8         8       152
+Allreduce           52    6      19         8         8         8       152
+Allreduce           52    7      19         8         8         8       152
+Allreduce           52    8      19         8         8         8       152
+Allreduce           52    9      19         8         8         8       152
+Allreduce           52   10      19         8         8         8       152
+Allreduce           52   11      19         8         8         8       152
+Allreduce           52   12      19         8         8         8       152
+Allreduce           52   13      19         8         8         8       152
+Allreduce           52   14      19         8         8         8       152
+Allreduce           52   15      19         8         8         8       152
+Allreduce           52    *     304         8         8         8      2432
+
+Allreduce           57    0       3         8         8         8        24
+Allreduce           57    1       3         8         8         8        24
+Allreduce           57    2       3         8         8         8        24
+Allreduce           57    3       3         8         8         8        24
+Allreduce           57    4       3         8         8         8        24
+Allreduce           57    5       3         8         8         8        24
+Allreduce           57    6       3         8         8         8        24
+Allreduce           57    7       3         8         8         8        24
+Allreduce           57    8       3         8         8         8        24
+Allreduce           57    9       3         8         8         8        24
+Allreduce           57   10       3         8         8         8        24
+Allreduce           57   11       3         8         8         8        24
+Allreduce           57   12       3         8         8         8        24
+Allreduce           57   13       3         8         8         8        24
+Allreduce           57   14       3         8         8         8        24
+Allreduce           57   15       3         8         8         8        24
+Allreduce           57    *      48         8         8         8       384
+
+Allreduce           58    0       3         8         8         8        24
+Allreduce           58    1       3         8         8         8        24
+Allreduce           58    2       3         8         8         8        24
+Allreduce           58    3       3         8         8         8        24
+Allreduce           58    4       3         8         8         8        24
+Allreduce           58    5       3         8         8         8        24
+Allreduce           58    6       3         8         8         8        24
+Allreduce           58    7       3         8         8         8        24
+Allreduce           58    8       3         8         8         8        24
+Allreduce           58    9       3         8         8         8        24
+Allreduce           58   10       3         8         8         8        24
+Allreduce           58   11       3         8         8         8        24
+Allreduce           58   12       3         8         8         8        24
+Allreduce           58   13       3         8         8         8        24
+Allreduce           58   14       3         8         8         8        24
+Allreduce           58   15       3         8         8         8        24
+Allreduce           58    *      48         8         8         8       384
+
+Allreduce           64    0      16         4         4         4        64
+Allreduce           64    1      16         4         4         4        64
+Allreduce           64    2      16         4         4         4        64
+Allreduce           64    3      16         4         4         4        64
+Allreduce           64    4      16         4         4         4        64
+Allreduce           64    5      16         4         4         4        64
+Allreduce           64    6      16         4         4         4        64
+Allreduce           64    7      16         4         4         4        64
+Allreduce           64    8      16         4         4         4        64
+Allreduce           64    9      16         4         4         4        64
+Allreduce           64   10      16         4         4         4        64
+Allreduce           64   11      16         4         4         4        64
+Allreduce           64   12      16         4         4         4        64
+Allreduce           64   13      16         4         4         4        64
+Allreduce           64   14      16         4         4         4        64
+Allreduce           64   15      16         4         4         4        64
+Allreduce           64    *     256         4         4         4      1024
+
+Bcast                4    0       3         8         8         8        24
+Bcast                4    1       3         8         8         8        24
+Bcast                4    2       3         8         8         8        24
+Bcast                4    3       3         8         8         8        24
+Bcast                4    4       3         8         8         8        24
+Bcast                4    5       3         8         8         8        24
+Bcast                4    6       3         8         8         8        24
+Bcast                4    7       3         8         8         8        24
+Bcast                4    8       3         8         8         8        24
+Bcast                4    9       3         8         8         8        24
+Bcast                4   10       3         8         8         8        24
+Bcast                4   11       3         8         8         8        24
+Bcast                4   12       3         8         8         8        24
+Bcast                4   13       3         8         8         8        24
+Bcast                4   14       3         8         8         8        24
+Bcast                4   15       3         8         8         8        24
+Bcast                4    *      48         8         8         8       384
+
+Bcast                7    0       1         8         8         8         8
+Bcast                7    1       1         8         8         8         8
+Bcast                7    2       1         8         8         8         8
+Bcast                7    3       1         8         8         8         8
+Bcast                7    4       1         8         8         8         8
+Bcast                7    5       1         8         8         8         8
+Bcast                7    6       1         8         8         8         8
+Bcast                7    7       1         8         8         8         8
+Bcast                7    8       1         8         8         8         8
+Bcast                7    9       1         8         8         8         8
+Bcast                7   10       1         8         8         8         8
+Bcast                7   11       1         8         8         8         8
+Bcast                7   12       1         8         8         8         8
+Bcast                7   13       1         8         8         8         8
+Bcast                7   14       1         8         8         8         8
+Bcast                7   15       1         8         8         8         8
+Bcast                7    *      16         8         8         8       128
+
+Bcast               13    0       1         4         4         4         4
+Bcast               13    1       1         4         4         4         4
+Bcast               13    2       1         4         4         4         4
+Bcast               13    3       1         4         4         4         4
+Bcast               13    4       1         4         4         4         4
+Bcast               13    5       1         4         4         4         4
+Bcast               13    6       1         4         4         4         4
+Bcast               13    7       1         4         4         4         4
+Bcast               13    8       1         4         4         4         4
+Bcast               13    9       1         4         4         4         4
+Bcast               13   10       1         4         4         4         4
+Bcast               13   11       1         4         4         4         4
+Bcast               13   12       1         4         4         4         4
+Bcast               13   13       1         4         4         4         4
+Bcast               13   14       1         4         4         4         4
+Bcast               13   15       1         4         4         4         4
+Bcast               13    *      16         4         4         4        64
+
+Bcast               17    0       1         8         8         8         8
+Bcast               17    1       1         8         8         8         8
+Bcast               17    2       1         8         8         8         8
+Bcast               17    3       1         8         8         8         8
+Bcast               17    4       1         8         8         8         8
+Bcast               17    5       1         8         8         8         8
+Bcast               17    6       1         8         8         8         8
+Bcast               17    7       1         8         8         8         8
+Bcast               17    8       1         8         8         8         8
+Bcast               17    9       1         8         8         8         8
+Bcast               17   10       1         8         8         8         8
+Bcast               17   11       1         8         8         8         8
+Bcast               17   12       1         8         8         8         8
+Bcast               17   13       1         8         8         8         8
+Bcast               17   14       1         8         8         8         8
+Bcast               17   15       1         8         8         8         8
+Bcast               17    *      16         8         8         8       128
+
+Bcast               34    0       2         8         8         8        16
+Bcast               34    1       2         8         8         8        16
+Bcast               34    2       2         8         8         8        16
+Bcast               34    3       2         8         8         8        16
+Bcast               34    4       2         8         8         8        16
+Bcast               34    5       2         8         8         8        16
+Bcast               34    6       2         8         8         8        16
+Bcast               34    7       2         8         8         8        16
+Bcast               34    8       2         8         8         8        16
+Bcast               34    9       2         8         8         8        16
+Bcast               34   10       2         8         8         8        16
+Bcast               34   11       2         8         8         8        16
+Bcast               34   12       2         8         8         8        16
+Bcast               34   13       2         8         8         8        16
+Bcast               34   14       2         8         8         8        16
+Bcast               34   15       2         8         8         8        16
+Bcast               34    *      32         8         8         8       256
+
+Bcast               43    0       1        16        16        16        16
+Bcast               43    1       1        16        16        16        16
+Bcast               43    2       1        16        16        16        16
+Bcast               43    3       1        16        16        16        16
+Bcast               43    4       1        16        16        16        16
+Bcast               43    5       1        16        16        16        16
+Bcast               43    6       1        16        16        16        16
+Bcast               43    7       1        16        16        16        16
+Bcast               43    8       1        16        16        16        16
+Bcast               43    9       1        16        16        16        16
+Bcast               43   10       1        16        16        16        16
+Bcast               43   11       1        16        16        16        16
+Bcast               43   12       1        16        16        16        16
+Bcast               43   13       1        16        16        16        16
+Bcast               43   14       1        16        16        16        16
+Bcast               43   15       1        16        16        16        16
+Bcast               43    *      16        16        16        16       256
+
+Bcast               45    0       1      8883      8883      8883      8883
+Bcast               45    1       1      8883      8883      8883      8883
+Bcast               45    2       1      8883      8883      8883      8883
+Bcast               45    3       1      8883      8883      8883      8883
+Bcast               45    4       1      8883      8883      8883      8883
+Bcast               45    5       1      8883      8883      8883      8883
+Bcast               45    6       1      8883      8883      8883      8883
+Bcast               45    7       1      8883      8883      8883      8883
+Bcast               45    8       1      8883      8883      8883      8883
+Bcast               45    9       1      8883      8883      8883      8883
+Bcast               45   10       1      8883      8883      8883      8883
+Bcast               45   11       1      8883      8883      8883      8883
+Bcast               45   12       1      8883      8883      8883      8883
+Bcast               45   13       1      8883      8883      8883      8883
+Bcast               45   14       1      8883      8883      8883      8883
+Bcast               45   15       1      8883      8883      8883      8883
+Bcast               45    *      16      8883      8883      8883 1.421e+05
+
+Bcast               59    0       1         8         8         8         8
+Bcast               59    1       1         8         8         8         8
+Bcast               59    2       1         8         8         8         8
+Bcast               59    3       1         8         8         8         8
+Bcast               59    4       1         8         8         8         8
+Bcast               59    5       1         8         8         8         8
+Bcast               59    6       1         8         8         8         8
+Bcast               59    7       1         8         8         8         8
+Bcast               59    8       1         8         8         8         8
+Bcast               59    9       1         8         8         8         8
+Bcast               59   10       1         8         8         8         8
+Bcast               59   11       1         8         8         8         8
+Bcast               59   12       1         8         8         8         8
+Bcast               59   13       1         8         8         8         8
+Bcast               59   14       1         8         8         8         8
+Bcast               59   15       1         8         8         8         8
+Bcast               59    *      16         8         8         8       128
+
+Bcast               62    0       1        16        16        16        16
+Bcast               62    1       1        16        16        16        16
+Bcast               62    2       1        16        16        16        16
+Bcast               62    3       1        16        16        16        16
+Bcast               62    4       1        16        16        16        16
+Bcast               62    5       1        16        16        16        16
+Bcast               62    6       1        16        16        16        16
+Bcast               62    7       1        16        16        16        16
+Bcast               62    8       1        16        16        16        16
+Bcast               62    9       1        16        16        16        16
+Bcast               62   10       1        16        16        16        16
+Bcast               62   11       1        16        16        16        16
+Bcast               62   12       1        16        16        16        16
+Bcast               62   13       1        16        16        16        16
+Bcast               62   14       1        16        16        16        16
+Bcast               62   15       1        16        16        16        16
+Bcast               62    *      16        16        16        16       256
+
+Bcast               65    0       2         8         8         8        16
+Bcast               65    1       2         8         8         8        16
+Bcast               65    2       2         8         8         8        16
+Bcast               65    3       2         8         8         8        16
+Bcast               65    4       2         8         8         8        16
+Bcast               65    5       2         8         8         8        16
+Bcast               65    6       2         8         8         8        16
+Bcast               65    7       2         8         8         8        16
+Bcast               65    8       2         8         8         8        16
+Bcast               65    9       2         8         8         8        16
+Bcast               65   10       2         8         8         8        16
+Bcast               65   11       2         8         8         8        16
+Bcast               65   12       2         8         8         8        16
+Bcast               65   13       2         8         8         8        16
+Bcast               65   14       2         8         8         8        16
+Bcast               65   15       2         8         8         8        16
+Bcast               65    *      32         8         8         8       256
+
+Isend                2    0      41        96     20.29         0       832
+Isend                2    1      50        96      22.4         0      1120
+Isend                2    2      56        96     23.43         0      1312
+Isend                2    3      56        96     22.43         0      1256
+Isend                2    4      60        96      21.6         0      1296
+Isend                2    5      65        96     21.42         0      1392
+Isend                2    6      64        96     20.38         0      1304
+Isend                2    7      68       144     22.71         0      1544
+Isend                2    8      73       192        24         0      1752
+Isend                2    9      77       192     24.52         0      1888
+Isend                2   10      67        80     19.52         0      1308
+Isend                2   11      49        64     17.63         0       864
+Isend                2   12      64        80     19.69         0      1260
+Isend                2   13      45        64     17.78         0       800
+Isend                2   14      34        96     19.06         0       648
+Isend                2   15      35        96      19.2         0       672
+Isend                2    *     904       192     21.29         0 1.925e+04
+
+Isend               23    0      14       200        68         0       952
+Isend               23    1      27       608     91.85         8      2480
+Isend               23    2      26       232     72.62         0      1888
+Isend               23    3      27       200     67.56        16      1824
+Isend               23    4      29       624      97.1         0      2816
+Isend               23    5      30       320     83.47         8      2504
+Isend               23    6      30       216      69.6         0      2088
+Isend               23    7      35       264      78.4         8      2744
+Isend               23    8      34       496     137.6         8      4680
+Isend               23    9      49       496     98.45         0      4824
+Isend               23   10      35       256        64         0      2240
+Isend               23   11      15       200     69.87         8      1048
+Isend               23   12      31       248     64.26         0      1992
+Isend               23   13      14       200     74.86         8      1048
+Isend               23   14      12       144        52         0       624
+Isend               23   15      12       144     58.67         0       704
+Isend               23    *     420       624     82.04         0 3.446e+04
+
+Isend               24    0      13        48     32.31         4       420
+Isend               24    1      25        48      33.6         4       840
+Isend               24    2      24        48      35.5         4       852
+Isend               24    3      24        48     35.33         4       848
+Isend               24    4      26        48     32.77         4       852
+Isend               24    5      26        48     33.08         4       860
+Isend               24    6      26        48        30         4       780
+Isend               24    7      28        72     39.29         4      1100
+Isend               24    8      28        96     48.86         4      1368
+Isend               24    9      42        96     37.71         4      1584
+Isend               24   10      28        40     25.43         4       712
+Isend               24   11      13        32     25.85         4       336
+Isend               24   12      26        40     26.62         4       692
+Isend               24   13      13        32     25.85         4       336
+Isend               24   14      11        48     27.64        16       304
+Isend               24   15      11        48     27.64        16       304
+Isend               24    *     364        96     33.48         4 1.219e+04
+
+Isend               25    0      43        48      34.7         4      1492
+Isend               25    1      86        48     37.95         8      3264
+Isend               25    2      86        48     35.12         4      3020
+Isend               25    3      88        48     34.14         4      3004
+Isend               25    4      88        48     37.86         4      3332
+Isend               25    5      90        48     33.64         4      3028
+Isend               25    6      90        48     33.82         4      3044
+Isend               25    7     102        48     31.18         4      3180
+Isend               25    8     102        96     54.47         4      5556
+Isend               25    9     138        96     40.61         4      5604
+Isend               25   10     101        32      23.8         4      2404
+Isend               25   11      45        32     25.96         4      1168
+Isend               25   12      91        32     25.45         4      2316
+Isend               25   13      44        32     26.45         4      1164
+Isend               25   14      42        48     31.24        16      1312
+Isend               25   15      42        48     31.14        12      1308
+Isend               25    *    1278        96     34.58         4  4.42e+04
+
+Isend               31    0      91       128     58.81         0      5352
+Isend               31    1     181       608     72.53         8 1.313e+04
+Isend               31    2     194       232     56.95         0 1.105e+04
+Isend               31    3     202       184     54.81         8 1.107e+04
+Isend               31    4     190       624     70.74         0 1.344e+04
+Isend               31    5     212       320     59.25         8 1.256e+04
+Isend               31    6     212       192     53.28         0  1.13e+04
+Isend               31    7     251       264      49.5         8 1.242e+04
+Isend               31    8     266       384     78.35         8 2.084e+04
+Isend               31    9     274       368     72.67         0 1.991e+04
+Isend               31   10     243       256     39.01         0      9480
+Isend               31   11     106       200     42.64         8      4520
+Isend               31   12     212       248     41.66         0      8832
+Isend               31   13     106       200     42.72         8      4528
+Isend               31   14      74       144     72.43         0      5360
+Isend               31   15      74       144     72.76         0      5384
+Isend               31    *    2888       624     58.58         0 1.692e+05
+
+Isend               35    0      18        96     21.78         8       392
+Isend               35    1      29        96     21.79         8       632
+Isend               35    2      22        96     29.82         8       656
+Isend               35    3      23        96     25.04         8       576
+Isend               35    4      37        96     19.46         8       720
+Isend               35    5      38        96     19.16         8       728
+Isend               35    6      38        96     18.53         8       704
+Isend               35    7      40       144      23.8         8       952
+Isend               35    8      41       192     27.71         8      1136
+Isend               35    9      59       192     23.86         8      1408
+Isend               35   10      39        80     18.46         8       720
+Isend               35   11      19        64     21.47         8       408
+Isend               35   12      38        80     17.05         8       648
+Isend               35   13      19        64     21.05         8       400
+Isend               35   14       3        96     53.33        32       160
+Isend               35   15       3        96     53.33        32       160
+Isend               35    *     466       192     22.32         8  1.04e+04
+
+Isend               51    0      11        64     43.64        32       480
+Isend               51    1      16        64        40        32       640
+Isend               51    2      16        64        40        32       640
+Isend               51    3       9        32        32        32       288
+Isend               51    4       9        32        32        32       288
+Isend               51    5      16        64        40        32       640
+Isend               51    6      14        32        32        32       448
+Isend               51    7       9        32        32        32       288
+Isend               51    8      11        64     43.64        32       480
+Isend               51    9      14        32        32        32       448
+Isend               51   10      14        32        32        32       448
+Isend               51   11      11        64     43.64        32       480
+Isend               51   12       9        32        32        32       288
+Isend               51   13      14        32        32        32       448
+Isend               51   14      16        64        40        32       640
+Isend               51   15       9        32        32        32       288
+Isend               51    *     198        64     36.53        32      7232
+
+Isend               70    1       9        16        16        16       144
+Isend               70    2       5        16        16        16        80
+Isend               70    3       3        16        16        16        48
+Isend               70    4       7        16        16        16       112
+Isend               70    5       5        16        16        16        80
+Isend               70    6       1        16        16        16        16
+Isend               70    7       3        16        16        16        48
+Isend               70    8       5        16        16        16        80
+Isend               70    9       3        16        16        16        48
+Isend               70   10       7        16        16        16       112
+Isend               70   11       5        16        16        16        80
+Isend               70   12       7        16        16        16       112
+Isend               70   13       7        16        16        16       112
+Isend               70   14       7        16        16        16       112
+Isend               70   15       8        16        16        16       128
+Isend               70    *      82        16        16        16      1312
+
+Reduce              32    0       2        48        48        48        96
+Reduce              32    1       2        48        48        48        96
+Reduce              32    2       2        48        48        48        96
+Reduce              32    3       2        48        48        48        96
+Reduce              32    4       2        48        48        48        96
+Reduce              32    5       2        48        48        48        96
+Reduce              32    6       2        48        48        48        96
+Reduce              32    7       2        48        48        48        96
+Reduce              32    8       2        48        48        48        96
+Reduce              32    9       2        48        48        48        96
+Reduce              32   10       2        48        48        48        96
+Reduce              32   11       2        48        48        48        96
+Reduce              32   12       2        48        48        48        96
+Reduce              32   13       2        48        48        48        96
+Reduce              32   14       2        48        48        48        96
+Reduce              32   15       2        48        48        48        96
+Reduce              32    *      32        48        48        48      1536
+
+Reduce              66    0       3        32        32        32        96
+Reduce              66    1       3        32        32        32        96
+Reduce              66    2       3        32        32        32        96
+Reduce              66    3       3        32        32        32        96
+Reduce              66    4       3        32        32        32        96
+Reduce              66    5       3        32        32        32        96
+Reduce              66    6       3        32        32        32        96
+Reduce              66    7       3        32        32        32        96
+Reduce              66    8       3        32        32        32        96
+Reduce              66    9       3        32        32        32        96
+Reduce              66   10       3        32        32        32        96
+Reduce              66   11       3        32        32        32        96
+Reduce              66   12       3        32        32        32        96
+Reduce              66   13       3        32        32        32        96
+Reduce              66   14       3        32        32        32        96
+Reduce              66   15       3        32        32        32        96
+Reduce              66    *      48        32        32        32      1536
+
+Scan                 8    0       4         8         8         8        32
+Scan                 8    1       4         8         8         8        32
+Scan                 8    2       4         8         8         8        32
+Scan                 8    3       4         8         8         8        32
+Scan                 8    4       4         8         8         8        32
+Scan                 8    5       4         8         8         8        32
+Scan                 8    6       4         8         8         8        32
+Scan                 8    7       4         8         8         8        32
+Scan                 8    8       4         8         8         8        32
+Scan                 8    9       4         8         8         8        32
+Scan                 8   10       4         8         8         8        32
+Scan                 8   11       4         8         8         8        32
+Scan                 8   12       4         8         8         8        32
+Scan                 8   13       4         8         8         8        32
+Scan                 8   14       4         8         8         8        32
+Scan                 8   15       4         8         8         8        32
+Scan                 8    *      64         8         8         8       512
+
+Send                33    0      38        56     26.53         4      1008
+Send                33    1      53        56     26.26         4      1392
+Send                33    2      62        56     29.03         4      1800
+Send                33    3      60        56     31.07         4      1864
+Send                33    4      51        56     28.55         4      1456
+Send                33    5      70        56     29.37         4      2056
+Send                33    6      75        56     33.17         4      2488
+Send                33    7      78        56     33.13         4      2584
+Send                33    8      80        56      31.2         4      2496
+Send                33    9      72        56     31.56         4      2272
+Send                33   10      65        56     27.45         4      1784
+Send                33   11      45        56     27.91         4      1256
+Send                33   12      50        56      23.2         4      1160
+Send                33   13      40        56      26.4         4      1056
+Send                33   14      37        56     25.08         4       928
+Send                33   15      28        56     24.86         4       696
+Send                33    *     904        56     29.09         4  2.63e+04
+
+------- Start Communication Matrix -------------
+
+Statistics of rank: 0
+
+Source	Target	Total Amount	Total Count
+0	0	163625	2644
+0	1	19787	393
+0	2	10451	194
+0	3	10191	150
+0	4	10287	188
+0	5	10219	152
+0	6	10259	154
+0	7	10191	150
+0	8	10287	188
+0	9	10283	154
+0	10	10291	154
+0	11	10291	153
+0	12	10319	155
+0	13	10319	155
+0	14	10259	154
+0	15	10191	150
+
+Statistics of rank: 1
+
+Source	Target	Total Amount	Total Count
+1	0	11324	395
+1	1	42848	2686
+1	2	13752	352
+1	3	1412	152
+1	4	1340	148
+1	5	1336	148
+1	6	1368	150
+1	7	1364	149
+1	8	1336	147
+1	9	1340	149
+1	10	1400	150
+1	11	1400	150
+1	12	1372	148
+1	13	1372	149
+1	14	1368	150
+1	15	1364	149
+
+Statistics of rank: 2
+
+Source	Target	Total Amount	Total Count
+2	0	1868	194
+2	1	11080	341
+2	2	40216	2726
+2	3	10876	402
+2	4	1396	151
+2	5	1368	150
+2	6	1336	148
+2	7	1340	148
+2	8	1368	150
+2	9	1364	149
+2	10	1372	149
+2	11	1372	148
+2	12	1400	150
+2	13	1400	150
+2	14	1336	148
+2	15	1340	148
+
+Statistics of rank: 3
+
+Source	Target	Total Amount	Total Count
+3	0	1464	150
+3	1	1508	152
+3	2	10892	396
+3	3	39668	2692
+3	4	10864	342
+3	5	1648	171
+3	6	1300	147
+3	7	1368	150
+3	8	1336	147
+3	9	1340	149
+3	10	1300	147
+3	11	1368	150
+3	12	1272	145
+3	13	1340	149
+3	14	1300	147
+3	15	1368	150
+
+Statistics of rank: 4
+
+Source	Target	Total Amount	Total Count
+4	0	1560	188
+4	1	1300	147
+4	2	1452	151
+4	3	13372	347
+4	4	43344	2767
+4	5	12176	402
+4	6	1588	203
+4	7	1272	145
+4	8	1368	150
+4	9	1364	149
+4	10	1340	149
+4	11	1272	145
+4	12	1368	150
+4	13	1300	147
+4	14	1340	149
+4	15	1272	145
+
+Statistics of rank: 5
+
+Source	Target	Total Amount	Total Count
+5	0	1532	153
+5	1	1336	148
+5	2	1368	150
+5	3	1748	171
+5	4	12012	398
+5	5	42696	2752
+5	6	12216	372
+5	7	1532	168
+5	8	1336	147
+5	9	1340	149
+5	10	1400	150
+5	11	1400	150
+5	12	1372	148
+5	13	1372	149
+5	14	1368	150
+5	15	1364	149
+
+Statistics of rank: 6
+
+Source	Target	Total Amount	Total Count
+6	0	1556	154
+6	1	1368	150
+6	2	1336	148
+6	3	1340	148
+6	4	1736	203
+6	5	11516	367
+6	6	40944	2781
+6	7	10832	400
+6	8	1772	172
+6	9	1420	150
+6	10	1328	147
+6	11	1340	148
+6	12	1356	148
+6	13	1368	150
+6	14	1336	148
+6	15	1340	148
+
+Statistics of rank: 7
+
+Source	Target	Total Amount	Total Count
+7	0	1464	150
+7	1	1340	149
+7	2	1300	147
+7	3	1368	150
+7	4	1272	145
+7	5	1628	168
+7	6	10912	400
+7	7	43680	2812
+7	8	12888	360
+7	9	2668	211
+7	10	1768	171
+7	11	1428	150
+7	12	1648	167
+7	13	1328	147
+7	14	1300	147
+7	15	1368	150
+
+Statistics of rank: 8
+
+Source	Target	Total Amount	Total Count
+8	0	1560	188
+8	1	1272	146
+8	2	1368	150
+8	3	1272	146
+8	4	1368	150
+8	5	1272	146
+8	6	1740	172
+8	7	15108	362
+8	8	57276	2939
+8	9	20800	370
+8	10	3624	269
+8	11	1800	170
+8	12	1932	212
+8	13	1520	162
+8	14	1368	150
+8	15	1272	146
+
+Statistics of rank: 9
+
+Source	Target	Total Amount	Total Count
+9	0	1532	154
+9	1	1364	149
+9	2	1340	149
+9	3	1364	149
+9	4	1340	149
+9	5	1364	149
+9	6	1356	150
+9	7	2784	214
+9	8	20912	374
+9	9	56804	2926
+9	10	8860	340
+9	11	1652	160
+9	12	8764	335
+9	13	1468	156
+9	14	1340	149
+9	15	1364	149
+
+Statistics of rank: 10
+
+Source	Target	Total Amount	Total Count
+10	0	1556	154
+10	1	1368	150
+10	2	1364	149
+10	3	1340	148
+10	4	1364	149
+10	5	1368	150
+10	6	1352	148
+10	7	1648	171
+10	8	3080	271
+10	9	8872	341
+10	10	38168	2834
+10	11	9084	389
+10	12	1656	168
+10	13	1412	149
+10	14	1364	149
+10	15	1340	148
+
+Statistics of rank: 11
+
+Source	Target	Total Amount	Total Count
+11	0	1492	152
+11	1	1368	150
+11	2	1300	147
+11	3	1368	150
+11	4	1272	145
+11	5	1368	150
+11	6	1300	147
+11	7	1428	151
+11	8	1620	170
+11	9	1604	162
+11	10	9376	389
+11	11	29232	2514
+11	12	1472	152
+11	13	1484	150
+11	14	1300	147
+11	15	1480	152
+
+Statistics of rank: 12
+
+Source	Target	Total Amount	Total Count
+12	0	1560	155
+12	1	1300	147
+12	2	1368	150
+12	3	1272	145
+12	4	1368	150
+12	5	1300	147
+12	6	1356	149
+12	7	1488	166
+12	8	1812	215
+12	9	8728	335
+12	10	1564	169
+12	11	1416	153
+12	12	36428	2803
+12	13	9128	391
+12	14	1384	184
+12	15	1384	147
+
+Statistics of rank: 13
+
+Source	Target	Total Amount	Total Count
+13	0	1560	155
+13	1	1364	149
+13	2	1368	150
+13	3	1364	149
+13	4	1340	148
+13	5	1364	149
+13	6	1368	150
+13	7	1352	148
+13	8	1472	162
+13	9	1468	156
+13	10	1404	152
+13	11	1364	151
+13	12	9332	390
+13	13	29092	2513
+13	14	1496	153
+13	15	1476	151
+
+Statistics of rank: 14
+
+Source	Target	Total Amount	Total Count
+14	0	1556	154
+14	1	1368	150
+14	2	1336	148
+14	3	1340	148
+14	4	1364	149
+14	5	1368	150
+14	6	1336	148
+14	7	1340	148
+14	8	1368	150
+14	9	1364	149
+14	10	1372	149
+14	11	1404	150
+14	12	1488	186
+14	13	1464	154
+14	14	29152	2475
+14	15	9684	342
+
+Statistics of rank: 15
+
+Source	Target	Total Amount	Total Count
+15	0	1544	159
+15	1	1420	158
+15	2	1380	156
+15	3	1448	159
+15	4	1352	154
+15	5	1420	158
+15	6	1380	156
+15	7	1448	159
+15	8	1416	156
+15	9	1420	158
+15	10	1380	156
+15	11	1480	161
+15	12	1384	156
+15	13	1516	164
+15	14	9960	353
+15	15	29948	2563
+
+------- End Communication Matrix -------------
+
+---------------------------------------------------------------------------
+@--- End of Report --------------------------------------------------------
+---------------------------------------------------------------------------
