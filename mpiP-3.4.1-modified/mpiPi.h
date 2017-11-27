@@ -170,6 +170,8 @@ typedef struct _mpiPi_t
 	
 	long long **sendMessagesAmountGeneral;
 	long long **sendMessagesCountGeneral;
+    
+    int include_all_to_all;
 	
 	//End my variables
 	

@@ -1244,6 +1244,10 @@ mpiPi_finalize ()
 
 void mpiPi_update_all_to_all_stats_diff_amount(double sendSize, double revSize){
 
+    if(mpiPi.include_all_to_all == 0){
+        return;
+    }
+    
 	int actualRank = mpiPi.rank;
 	
 	int totalRanks = mpiPi.size;

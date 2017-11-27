@@ -55,7 +55,11 @@ c) Build the application AMG2013 executing the following command:
 
 	'make'
 
-d) Once you have build the application AMG2013 go to the folder examples/AMG2013/test and execute the following command:
+d) If you want to enable the profile of all to all operations (All_gather, etc) you have to set the enviroment variable MPIP with the following command:
+
+	'export MPIP="-i"'
+
+e) Once you have build the application AMG2013 go to the folder examples/AMG2013/test and execute the following command:
 
 	'../../../mpiP-3.4.1-modified/bin/mpirun-mpip -n 8 amg2013 -P 2 2 2'
 
